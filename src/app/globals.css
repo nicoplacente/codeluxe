@@ -46,6 +46,12 @@ p {
   color: var(--secondary-txt);
 }
 
+footer {
+  background: #0002;
+  backdrop-filter: blur(10px);
+  border-top: 1px solid #83cee599;
+}
+
 /* Header animation */
 
 header {
