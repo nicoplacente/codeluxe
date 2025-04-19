@@ -15,14 +15,15 @@ export default function Header() {
 
         <ul className="flex gap-2">
           {navOptions.map((option) => (
-            <a
-              key={option.title}
-              href={option.href}
-              aria-label={option.title}
-              className="text-primary-txt hover:shadow-inner hover:shadow-primary/50 hover:scale-110 p-2 rounded-xl transition"
-            >
-              <option.icon />
-            </a>
+            <li key={option.title}>
+              <a
+                href={option.href}
+                aria-label={option.title}
+                className="text-primary-txt hover:shadow-inner hover:shadow-primary/50 hover:scale-110 p-2 rounded-xl transition"
+              >
+                <option.icon />
+              </a>
+            </li>
           ))}
         </ul>
       </nav>

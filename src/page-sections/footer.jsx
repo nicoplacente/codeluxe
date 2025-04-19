@@ -18,7 +18,7 @@ export default function Footer() {
               Codeluxe
             </span>
           </Link>
-          <ul className="flex flex-wrap items-center mb-6 text-sm text-secondary-txt sm:mb-0">
+          <ul className="flex flex-wrap items-center [&>li>a]:p-2 md:[&>li>a]:p-0 gap-2 mb-6 text-sm text-secondary-txt sm:mb-0">
             <li>
               <Link
                 href="/info"
