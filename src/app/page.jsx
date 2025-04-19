@@ -43,7 +43,7 @@ export default function Home() {
 
       <SectionContainer>
         <SubTitle className="text-xl">Nuestro proceso</SubTitle>
-        <ul className="flex flex-col sm:flex-row justify-center items-center w-full gap-2">
+        <article className="flex flex-col sm:flex-row justify-center items-center w-full gap-2">
           {ownProcess.map((e, index) => (
             <CardProccess
               key={index}
@@ -52,7 +52,7 @@ export default function Home() {
               isArrow={index < ownProcess.length - 1}
             />
           ))}
-        </ul>
+        </article>
       </SectionContainer>
     </main>
   );
