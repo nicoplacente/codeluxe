@@ -26,12 +26,13 @@
 }
 
 body {
-  background: linear-gradient(
+  /* background: linear-gradient(
     180deg,
     var(--background) 25%,
     #04121d 50%,
     var(--background) 75%
-  );
+  ); */
+  background: #000;
   /* height: ; */
 }
 
