@@ -61,7 +61,7 @@ export const ownProcess = [
 export const navOptions = [
   {
     title: "Sobre Nosotros",
-    href: "#",
+    href: "https://nicoplacente.netlify.app",
     icon: IconInfoCircle,
   },
   {

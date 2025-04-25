@@ -1,23 +1,25 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useState } from "react";
 import Link from "next/link";
 import NavButton from "@/ui/nav-button";
 import { navOptions } from "@/utils/constants";
 
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
-  // const headerRef = useRef<HTMLDivElement>(null);
 
-  // useEffect(() => {
-  //   const handleClickOutside = (e) => {
-  //     if (headerRef.current && !headerRef.current.contains(e.target)) {
-  //       setIsOpen(false);
-  //     }
-  //   };
-  //   document.addEventListener("mousedown", handleClickOutside);
-  //   return () => document.removeEventListener("mousedown", handleClickOutside);
-  // }, []);
+  useEffect(() => {
+    const handleClick = (e) => {
+      const target = e.target;
+
+      if (target.closest("nav") || target.closest("#nav-button")) return;
+
+      setIsOpen(false);
+    };
+
+    document.addEventListener("mousedown", handleClick);
+    return () => document.removeEventListener("mousedown", handleClick);
+  }, []);
 
   return (
     <header className="z-10 sticky top-0 bg-background">
@@ -30,7 +32,12 @@ export default function Header() {
           />
         </Link>
 
-        <NavButton isOpen={isOpen} toggle={() => setIsOpen((prev) => !prev)} />
+        <div id="nav-button">
+          <NavButton
+            isOpen={isOpen}
+            toggle={() => setIsOpen((prev) => !prev)}
+          />
+        </div>
 
         {isOpen && (
           <div className="flex flex-col gap-4 w-full left-0 absolute top-[65px] bg-secondary p-6 rounded-b-xl shadow-lg z-20 sm:hidden">
