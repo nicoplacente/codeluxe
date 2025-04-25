@@ -2,6 +2,7 @@ import {
   IconBellRinging,
   IconBrandInstagram,
   IconBrandLinkedin,
+  IconBrandTiktok,
   IconBrandWhatsapp,
   IconBrush,
   IconBulb,
@@ -82,5 +83,10 @@ export const navOptions = [
     title: "Instagram",
     href: "#",
     icon: IconBrandInstagram,
+  },
+  {
+    title: "TikTok",
+    href: "#",
+    icon: IconBrandTiktok,
   },
 ];

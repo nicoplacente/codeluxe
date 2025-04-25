@@ -5,10 +5,12 @@ import Paragraph from "@/ui/paragraph";
 import SubTitle from "@/ui/sub-title";
 import CardProccess from "@/components/card-proccess";
 import { benefits, ownProcess } from "@/utils/constants";
+import Hero from "@/page-sections/hero";
 
 export default function Home() {
   return (
-    <main className="max-w-4xl mx-auto my-12 flex justify-center flex-col gap-9 px-4">
+    <div className="max-w-4xl mx-auto my-12 flex justify-center flex-col gap-9 px-4">
+      <Hero />
       <SectionContainer>
         <Title>Impulsamos tu marca con diseño web estratégico</Title>
         <Paragraph className="text-sm">
@@ -54,6 +56,6 @@ export default function Home() {
           ))}
         </article>
       </SectionContainer>
-    </main>
+    </div>
   );
 }
