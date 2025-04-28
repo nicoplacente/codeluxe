@@ -39,22 +39,25 @@ export default function Header() {
           />
         </div>
 
-        {isOpen && (
-          <div className="flex flex-col gap-4 w-full left-0 absolute top-[65px] bg-secondary p-6 rounded-b-xl shadow-lg z-20 sm:hidden">
-            {navOptions.map((option) => (
-              <a
-                key={option.title}
-                href={option.href}
-                aria-label={option.title}
-                title={option.title}
-                className="text-primary-txt hover:bg-primary/10 px-4 py-2 flex items-center gap-2 rounded-xl transition"
-                onClick={() => setIsOpen(false)}
-              >
-                <option.icon /> {option.title}
-              </a>
-            ))}
-          </div>
-        )}
+        <aside
+          className={`flex flex-col gap-4 w-full left-0 absolute ${
+            isOpen ? "top-[65px]" : "-top-[500px]"
+          } bg-secondary p-6 rounded-b-xl shadow-lg z-20 sm:hidden transition-all duration-500`}
+        >
+          {navOptions.map((option) => (
+            <a
+              key={option.title}
+              href={option.href}
+              aria-label={option.title}
+              title={option.title}
+              target={option.target}
+              className="text-primary-txt hover:bg-primary/10 px-4 py-2 flex items-center gap-2 rounded-xl transition"
+              onClick={() => setIsOpen(false)}
+            >
+              <option.icon /> {option.title}
+            </a>
+          ))}
+        </aside>
 
         <div className="hidden gap-2 sm:flex">
           {navOptions.map((option) => (
@@ -62,6 +65,7 @@ export default function Header() {
               key={option.title}
               href={option.href}
               aria-label={option.title}
+              target={option.target}
               title={option.title}
               className="text-primary-txt hover:shadow-inner hover:shadow-primary/50 hover:scale-110 p-2 rounded-xl transition"
             >

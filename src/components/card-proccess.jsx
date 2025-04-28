@@ -12,7 +12,7 @@ export default function CardProccess({ title, svgIcon, isArrow }) {
       {isArrow && (
         <span className="w-fit text-primary">
           <div className="arrow-container">
-            <span className="arrow rotate-90 -translate-y-2 sm:-translate-y-0 sm:rotate-0">
+            <span className="arrow rotate-90  sm:rotate-0 left-1/2 -top-1/2 sm:-translate-x-[8px]">
               ›
             </span>
           </div>

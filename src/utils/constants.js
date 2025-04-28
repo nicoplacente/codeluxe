@@ -61,32 +61,38 @@ export const ownProcess = [
 export const navOptions = [
   {
     title: "Sobre Nosotros",
-    href: "https://nicoplacente.netlify.app",
+    href: "/info",
     icon: IconInfoCircle,
+    target: "_self",
   },
   {
     title: "Whatsapp",
-    href: "#",
+    href: "https://wa.me/2926402409",
     icon: IconBrandWhatsapp,
+    target: "_blank",
   },
   {
     title: "Correo",
-    href: "#",
+    href: "mailto:codeluxetech@gmail.com",
     icon: IconMail,
+    target: "_blank",
   },
   {
     title: "Linkedin",
-    href: "#",
+    href: "https://www.linkedin.com/company/codeluxee/",
     icon: IconBrandLinkedin,
+    target: "_blank",
   },
   {
     title: "Instagram",
-    href: "#",
+    href: "https://www.instagram.com/codeluxe_/",
     icon: IconBrandInstagram,
+    target: "_blank",
   },
   {
     title: "TikTok",
-    href: "#",
+    href: "https://www.tiktok.com/@codeluxe3",
     icon: IconBrandTiktok,
+    target: "_blank",
   },
 ];
