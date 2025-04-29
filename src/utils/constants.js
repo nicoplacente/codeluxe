@@ -18,23 +18,23 @@ import {
 
 export const benefits = [
   {
-    title: "Mejora de ventas",
-    description: "Convertir visitas en clientes",
+    title: "Aumento de ventas",
+    description: "Transformá visitas en conversiones reales",
     icon: IconChartBarPopular,
   },
   {
-    title: "Profesionalismo instantaneo",
-    description: "Impulsa tu imágen online",
+    title: "Imágen profesional inmediata",
+    description: "Llevá tu presencia online al siguiente nivel",
     icon: IconShieldDollar,
   },
   {
-    title: "Posicionamiento y visibilidad",
-    description: "Conseguí mas clientes",
+    title: "Mayor visibilidad y posicionamiento",
+    description: "Atraé más clientes y destacate en tu rubro",
     icon: IconSearch,
   },
   {
     title: "Copywriting persuasivo",
-    description: "Manejar que venden",
+    description: "Textos estratégicos que generan acción",
     icon: IconPencil,
   },
 ];
