@@ -6,55 +6,70 @@ import Title from "@/ui/title";
 
 export default function Info() {
   return (
-    <div className="grid grid-cols-4 grid-rows-2 gap-6 w-full max-w-4xl mx-auto my-12">
-      <div className="col-span-4 row-span-1">
+    <div className="flex flex-col gap-6 w-full max-w-4xl mx-auto my-12">
+      <SectionContainer>
+        <Title>¿Quiénes somos?</Title>
+        <Paragraph className="text-sm">
+          Equipo de desarrolladores apasionados por crear soluciones digitales
+          simples, efectivas y con una estética moderna.
+        </Paragraph>
+
+        <Paragraph className="text-sm">
+          Nuestra misión es acompañar a negocios, marcas y emprendedores en su
+          transformación digital, ofreciéndoles herramientas personalizadas,
+          funcionales y fáciles de usar.
+        </Paragraph>
+
+        <Paragraph className="text-sm">
+          Somos jóvenes, creativos, responsables y estamos convencidos de que la
+          tecnología puede hacer que cualquier negocio brille. En Codeluxe, cada
+          proyecto es una oportunidad para crecer, innovar y dejar huella.
+        </Paragraph>
+
+        <ButtonComponent />
+      </SectionContainer>
+      <div className="flex flex-col md:flex-row gap-6">
         <SectionContainer>
-          <Title>¿Quiénes somos?</Title>
-          <Paragraph className="text-sm">
-            Equipo de desarrolladores apasionados por crear soluciones digitales
-            simples, efectivas y con una estética moderna.
-          </Paragraph>
-
-          <Paragraph className="text-sm">
-            Nuestra misión es acompañar a negocios, marcas y emprendedores en su
-            transformación digital, ofreciéndoles herramientas personalizadas,
-            funcionales y fáciles de usar.
-          </Paragraph>
-
-          <Paragraph className="text-sm">
-            Somos jóvenes, creativos, responsables y estamos convencidos de que
-            la tecnología puede hacer que cualquier negocio brille. En Codeluxe,
-            cada proyecto es una oportunidad para crecer, innovar y dejar
-            huella.
-          </Paragraph>
-
-          <ButtonComponent />
-        </SectionContainer>
-      </div>
-      <div className="col-span-2 row-start-2">
-        <SectionContainer>
-          <article className="flex items-start gap-2">
+          <article className="flex gap-4">
             <img
-              className="size-32 object-cover rounded-full"
+              className="size-20 object-cover rounded-full"
               src="/nicoplacente.jpeg"
               alt="Nicolás Placente"
             />
-            <h3>Nicolás Placente</h3>
+            <div className="flex flex-col items-start gap-2">
+              <h3 className="font-semibold md:text-lg">Nicolás Placente</h3>
+              <button className="bg-primary/50 px-4 py-2 rounded-xl">
+                Ver porfolio
+              </button>
+            </div>
           </article>
-          <ButtonComponent />
+          <Paragraph>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis ullam
+            vel velit assumenda, et blanditiis repellendus porro quod! Incidunt
+            reiciendis hic enim minus illum inventore omnis doloremque odit
+            adipisci quod.
+          </Paragraph>
         </SectionContainer>
-      </div>
-      <div className="col-span-2 col-start-3 row-start-2">
         <SectionContainer>
-          <article className="flex items-start gap-2">
+          <article className="flex gap-4">
             <img
-              className="size-32 object-cover rounded-full"
+              className="size-20 object-cover rounded-full"
               src="tiago.jpg"
               alt="Tiago Navarro"
             />
-            <h3>Tiago Navarro</h3>
+            <div className="flex flex-col items-start gap-2">
+              <h3 className="font-semibold md:text-lg">Tiago Navarro</h3>
+              <button className="bg-primary/50 px-4 py-2 rounded-xl">
+                Ver porfolio
+              </button>
+            </div>
           </article>
-          <ButtonComponent />
+          <Paragraph>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis ullam
+            vel velit assumenda, et blanditiis repellendus porro quod! Incidunt
+            reiciendis hic enim minus illum inventore omnis doloremque odit
+            adipisci quod.
+          </Paragraph>
         </SectionContainer>
       </div>
     </div>

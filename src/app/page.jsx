@@ -9,7 +9,7 @@ import Hero from "@/page-sections/hero";
 
 export default function Home() {
   return (
-    <main className="max-w-4xl w-full mx-auto my-12 flex justify-center flex-col gap-9 px-4">
+    <>
       <Hero />
       <SectionContainer>
         <Title>Impulsamos tu marca con diseño web estratégico</Title>
@@ -56,6 +56,6 @@ export default function Home() {
           ))}
         </article>
       </SectionContainer>
-    </main>
+    </>
   );
 }
