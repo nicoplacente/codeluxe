@@ -43,7 +43,7 @@ export default function Footer() {
                 className="hover:underline"
                 aria-label="Solicitá una propuesta"
               >
-                Solicitá una propuesta
+                Enviá tu propuesta
               </Link>
             </li>
           </ul>

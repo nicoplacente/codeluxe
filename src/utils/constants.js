@@ -7,13 +7,16 @@ import {
   IconBrush,
   IconBulb,
   IconChartBarPopular,
-  IconFileDescription,
   IconInfoCircle,
   IconMail,
   IconPencil,
   IconRocket,
   IconSearch,
   IconShieldDollar,
+  IconHeadset,
+  IconSeo,
+  IconStackBack,
+  IconProgressCheck,
 } from "@tabler/icons-react";
 
 export const benefits = [
@@ -36,6 +39,30 @@ export const benefits = [
     title: "Copywriting persuasivo",
     description: "Textos estratégicos que generan acción",
     icon: IconPencil,
+  },
+];
+
+export const services = [
+  {
+    title: "Soporte y Escalabilidad",
+    description: "Mantenemos tu sitio actualizado, seguro y listo para crecer.",
+    icon: IconHeadset,
+  },
+  {
+    title: "Dominio y Optimización SEO",
+    description: "Mejoramos tu presencia online con SEO y gestión de dominio.",
+    icon: IconSeo,
+  },
+  {
+    title: "Actualizaciones y Cambios",
+    description:
+      "Realizamos ajustes en diseño, contenido o funcionalidades cuando los necesites.",
+    icon: IconProgressCheck,
+  },
+  {
+    title: "Gestión Integral",
+    description: "Nos ocupamos de todo lo relacionado a tu sitio web.",
+    icon: IconStackBack,
   },
 ];
 

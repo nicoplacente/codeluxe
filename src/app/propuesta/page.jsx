@@ -1,97 +1,102 @@
-import SectionContainer from "@/components/section-container";
-import ButtonComponent from "@/ui/button-component";
 import Title from "@/ui/title";
 import { IconFileUpload } from "@tabler/icons-react";
+import SubmitButton from "@/components/submit-button";
+import SubTitle from "@/ui/sub-title";
 
 export default function Propuesta() {
   return (
-    <section>
-      <Title>Envia tu propuesta</Title>
+    <main className="flex flex-col">
+      <Title>Envía tu propuesta</Title>
+      <h2 className="!text-secondary-txt text-pretty max-w-md md:hidden mt-6 text-sm">
+        Describa su proyecto (Puedes adjuntar un archivo de referencia si lo
+        desea)
+      </h2>
+      <div className="flex flex-col-reverse md:flex-row gap-12 my-6">
+        <div className="flex flex-col gap-6">
+          <h2 className="!text-secondary-txt text-pretty max-w-md hidden md:block">
+            Describa su proyecto (Puedes adjuntar un archivo de referencia si lo
+            desea)
+          </h2>
 
-      <form action="#" className="text-secondary-txt flex flex-col gap-6 my-12">
-        <div className="coolinput">
-          <label htmlFor="name" className="text">
-            Nombre y apellido
-          </label>
+          <section>
+            <SubTitle className="text-2xl !text-white/90">
+              Preguntas frecuentes
+            </SubTitle>
+            <article className="flex flex-col gap-4 my-4">
+              <details className="border-2 border-secondary rounded-xl hover:bg-black/30 transition duration-300 cursor-pointer">
+                <summary className="text-primary-txt text-sm sm:text-base marker:text-xs px-4 py-2">
+                  pregunta 1
+                </summary>
+                <p className="text-xs sm:text-sm text-secondary-txt pl-4 my-2">
+                  respuesta a la pregunta 1 xd xd xdddd
+                </p>
+              </details>
+
+              <details className="border-2 border-secondary rounded-xl hover:bg-black/30 transition duration-300 cursor-pointer">
+                <summary className="text-primary-txt text-sm sm:text-base marker:text-xs px-4 py-2">
+                  pregunta 1
+                </summary>
+                <p className="text-xs sm:text-sm text-secondary-txt pl-4 my-2">
+                  respuesta a la pregunta 1 xd xd xdddd
+                </p>
+              </details>
+
+              <details className="border-2 border-secondary rounded-xl hover:bg-black/30 transition duration-300 cursor-pointer">
+                <summary className="text-primary-txt text-sm sm:text-base marker:text-xs px-4 py-2">
+                  pregunta 1
+                </summary>
+                <p className="text-xs sm:text-sm text-secondary-txt pl-4 my-2">
+                  respuesta a la pregunta 1 xd xd xdddd
+                </p>
+              </details>
+            </article>
+          </section>
+        </div>
+
+        <form
+          action="#"
+          className="form-propuesta text-secondary-txt flex flex-col gap-4 flex-1"
+        >
           <input
             id="name"
             type="text"
-            placeholder="John Doe"
+            placeholder="Nombre y Apellido"
             name="name"
-            className="input"
           />
-        </div>
 
-        <div className="coolinput">
-          <label htmlFor="email" className="text">
-            Email
-          </label>
-          <input
-            id="email"
-            type="email"
-            placeholder="johndoe@ejemplo.com"
-            name="email"
-            className="input"
-          />
-        </div>
+          <input id="email" type="email" placeholder="Correo" name="email" />
 
-        <div className="coolinput">
-          <label htmlFor="subject" className="text">
-            Asunto
-          </label>
-          <input
-            id="subject"
-            type="text"
-            placeholder="Quiero armar una landing"
-            name="subject"
-            className="input"
-          />
-        </div>
+          <input id="subject" type="text" placeholder="Asunto" name="subject" />
 
-        <div className="coolinput">
-          <label htmlFor="phone" className="text">
-            Teléfono
-          </label>
-          <input
-            id="phone"
-            type="number"
-            placeholder="2929222999"
-            name="phone"
-            className="input"
-          />
-        </div>
+          <input id="phone" type="text" placeholder="Teléfono" name="phone" />
 
-        <div>
           <div className="coolinput relative">
-            <label htmlFor="description" className="text">
-              Describa su proyecto (Puedes adjuntar un archivo de referencia si
-              lo desea)
-            </label>
             <textarea
               id="description"
+              placeholder="Mensaje"
               name="description"
               className="input"
             ></textarea>
 
             <label
-              className="absolute bottom-0 right-0 cursor-pointer p-2 active:text-primary hover:bg-black/20 rounded-tl-lg transition-colors"
+              className="absolute bottom-0 right-0 cursor-pointer p-2 active:text-primary hover:bg-black/20 rounded-xl transition-colors"
               htmlFor="uploadFile"
               title="Adjuntar archivo"
             >
               <IconFileUpload />
             </label>
+
+            <input
+              id="uploadFile"
+              type="file"
+              name="reference"
+              className="hidden"
+            />
           </div>
 
-          <input
-            id="uploadFile"
-            type="file"
-            name="reference"
-            className="hidden"
-          />
-        </div>
-
-        <ButtonComponent txt="Enviar propuesta" />
-      </form>
-    </section>
+          <SubmitButton />
+        </form>
+      </div>
+    </main>
   );
 }

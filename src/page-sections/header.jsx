@@ -23,7 +23,7 @@ export default function Header() {
 
   return (
     <header className="z-10 sticky top-0 bg-background">
-      <nav className="flex mx-auto justify-between px-8 py-2 items-center text-primary-txt max-w-4xl relative">
+      <nav className="flex mx-auto justify-between px-4 lg:px-0 py-2 items-center text-primary-txt max-w-4xl relative">
         <Link href="/" aria-label="Inicio">
           <img
             src="/logo-codeluxe.webp"

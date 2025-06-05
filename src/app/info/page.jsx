@@ -1,8 +1,8 @@
 import SectionContainer from "@/components/section-container";
-import ButtonComponent from "@/ui/button-component";
+import CallToAction from "@/components/call-to-action";
 import Paragraph from "@/ui/paragraph";
-import SubTitle from "@/ui/sub-title";
 import Title from "@/ui/title";
+import PortfolioButtons from "@/ui/portfolio-button";
 
 export default function Info() {
   return (
@@ -26,10 +26,10 @@ export default function Info() {
           proyecto es una oportunidad para crecer, innovar y dejar huella.
         </Paragraph>
 
-        <ButtonComponent />
+        <CallToAction />
       </SectionContainer>
       <div className="flex flex-col md:flex-row gap-6">
-        <SectionContainer>
+        <SectionContainer className="md:aspect-video">
           <article className="flex gap-4">
             <img
               className="size-20 object-cover rounded-full"
@@ -38,19 +38,20 @@ export default function Info() {
             />
             <div className="flex flex-col items-start gap-2">
               <h3 className="font-semibold md:text-lg">Nicolás Placente</h3>
-              <button className="bg-primary/50 px-4 py-2 rounded-xl">
+              <PortfolioButtons
+                href="https://nicoplacente.netlify.app/"
+                aria="Portfolio de Nico Placente"
+              >
                 Ver porfolio
-              </button>
+              </PortfolioButtons>
             </div>
           </article>
-          <Paragraph>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis ullam
-            vel velit assumenda, et blanditiis repellendus porro quod! Incidunt
-            reiciendis hic enim minus illum inventore omnis doloremque odit
-            adipisci quod.
+          <Paragraph className="text-sm">
+            Desarrollador fullstack especializado en frontend, copywriter y
+            productor musical.
           </Paragraph>
         </SectionContainer>
-        <SectionContainer>
+        <SectionContainer className="md:aspect-video">
           <article className="flex gap-4">
             <img
               className="size-20 object-cover rounded-full"
@@ -59,16 +60,17 @@ export default function Info() {
             />
             <div className="flex flex-col items-start gap-2">
               <h3 className="font-semibold md:text-lg">Tiago Navarro</h3>
-              <button className="bg-primary/50 px-4 py-2 rounded-xl">
+              <PortfolioButtons
+                href="https://navarrotiago.vercel.app/"
+                aria="Portfolio de Tiago Navarro"
+              >
                 Ver porfolio
-              </button>
+              </PortfolioButtons>
             </div>
           </article>
-          <Paragraph>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis ullam
-            vel velit assumenda, et blanditiis repellendus porro quod! Incidunt
-            reiciendis hic enim minus illum inventore omnis doloremque odit
-            adipisci quod.
+
+          <Paragraph className="text-sm">
+            Desarrollador fullstack especializado en backend.
           </Paragraph>
         </SectionContainer>
       </div>

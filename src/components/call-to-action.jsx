@@ -3,7 +3,7 @@ import Link from "next/link";
 
 import { useRef } from "react";
 
-export default function ButtonComponent({ txt }) {
+export default function CallToAction() {
   const btnRef = useRef(null);
 
   const handleMouseMove = (e) => {
@@ -22,9 +22,7 @@ export default function ButtonComponent({ txt }) {
       onMouseMove={handleMouseMove}
       className="relative overflow-hidden px-6 w-fit text-primary-txt py-3 rounded-xl bg-secondary cursor-pointer font-light transition-all duration-200 group"
     >
-      <span className="relative z-10">
-        {`${txt ?? "Solicitá una propuesta"}`}
-      </span>
+      <span className="relative z-10">Enviá tu propuesta</span>
       <div
         className="pointer-events-none absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
         style={{
