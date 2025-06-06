@@ -1,7 +1,7 @@
 "use client";
 
 import SubmitButton from "@/components/submit-button";
-import { IconFileUpload } from "@tabler/icons-react";
+import { IconFileUpload ,IconFileFilled } from "@tabler/icons-react";
 import { useState } from "react";
 
 export default function FormPreview() {
@@ -158,19 +158,19 @@ export default function FormPreview() {
       </div>
 
       {filePreviews.length > 0 && (
-        <div className="flex gap-2 mt-2 flex-wrap">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 mt-2">
           {filePreviews.map((file, index) => (
             <div
               key={index}
-              className="flex items-center gap-2 text-sm min-w-fit border border-primary/30 rounded-xl px-3 py-2 bg-black/10 relative"
+              className="flex justify-between items-center gap-2 text-sm w-full border border-primary/30 rounded-xl px-3 py-2 bg-black/10 relative"
             >
-              {file.type.startsWith("image/") && (
+              {file.type.startsWith("image/") ? (
                 <img
                   src={URL.createObjectURL(file)}
                   alt={`Vista previa de ${file.name}`}
-                  className="size-10 object-cover rounded-xl"
+                  className="size-8 sm:size-10 object-cover rounded-xl"
                 />
-              )}
+              ):<IconFileFilled className="size-8 sm:size-14"/> }
               <span className="max-w-[120px] truncate">{file.name}</span>
               <button
                 type="button"

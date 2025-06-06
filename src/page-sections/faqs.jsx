@@ -22,7 +22,7 @@ export default function FAQs() {
               e.preventDefault();
               setActiveFAQ((prev) => (prev === id ? null : id));
             }}
-            className="border-2 border-secondary rounded-xl hover:bg-black/30 transition w-full md:max-w-sm duration-300 cursor-pointer"
+            className="border-2 border-secondary rounded-xl hover:bg-black/30 transition w-full lg:max-w-sm duration-300 cursor-pointer"
           >
             <summary className="text-primary-txt text-sm sm:text-base marker:text-xs px-4 py-2">
               {question}
