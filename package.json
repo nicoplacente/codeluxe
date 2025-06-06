@@ -10,7 +10,9 @@
   },
   "dependencies": {
     "@tabler/icons-react": "^3.31.0",
+    "formidable": "^3.5.4",
     "next": "15.3.0",
+    "nodemailer": "^7.0.3",
     "react": "^19.0.0",
     "react-dom": "^19.0.0"
   },

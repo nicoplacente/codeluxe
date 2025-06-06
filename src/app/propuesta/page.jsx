@@ -16,7 +16,6 @@ export default function Propuesta() {
             Describa su proyecto, puedes adjuntar archivos de referencia si lo
             desea (Se recomienda comprimir los archivos a un .zip)
           </h2>
-
           <FAQs />
         </div>
         <FormPreview />
