@@ -93,49 +93,53 @@ nav {
 
 /* Arrow animation */
 
-.arrow-container {
+.arrow-trail {
   position: relative;
-  width: 20px;
-  height: 20px;
-  overflow: visible;
+  display: inline-block;
+  width: 3ch; /* espacio para 3 flechas */
+  height: 1em;
 }
 
-.arrow {
+.arrow-trail span {
   position: absolute;
-  color: #67e8f9;
-  animation: trail 1.2s infinite ease-in-out;
-  font-size: 20px;
+  top: 0;
+  left: 0;
+  color: inherit;
   opacity: 0;
+  transform: translateX(0);
+  animation: arrowTrailAnim 1s infinite;
 }
 
-.arrow::before,
-.arrow::after {
-  content: "›";
-  position: absolute;
-  color: #67e8f9;
-  opacity: 0;
-  animation: trail 1.2s infinite ease-in-out;
+.arrow-trail span:nth-child(1) {
+  animation-delay: 0s;
+}
+.arrow-trail span:nth-child(2) {
+  animation-delay: 0.15s;
+}
+.arrow-trail span:nth-child(3) {
+  animation-delay: 0.3s;
 }
 
-.arrow::before {
-  left: -8px;
-  animation-delay: 0.2s;
-}
-
-@keyframes trail {
+@keyframes arrowTrailAnim {
   0% {
-    transform: translateX(0);
     opacity: 0;
+    transform: translateX(0);
   }
-  30% {
+  20% {
     opacity: 1;
+    transform: translateX(8px);
+  }
+  40% {
+    opacity: 0.5;
+    transform: translateX(12px);
   }
   60% {
-    opacity: 0.3;
+    opacity: 0.2;
+    transform: translateX(14px);
   }
   100% {
-    transform: translateX(8px);
     opacity: 0;
+    transform: translateX(16px);
   }
 }
 

@@ -10,13 +10,11 @@ export default function CardProccess({ title, svgIcon, isArrow }) {
         <SubTitle className="text-sm">{title}</SubTitle>
       </div>
       {isArrow && (
-        <span className="w-fit text-primary">
-          <div className="arrow-container">
-            <span className="arrow rotate-90  sm:rotate-0 left-1/2 -top-1/2 sm:-translate-x-[8px]">
-              ›
-            </span>
-          </div>
-        </span>
+        <div className="arrow-trail text-primary text-2xl px-2">
+          <span>›</span>
+          <span>›</span>
+          <span>›</span>
+        </div>
       )}
     </>
   );
