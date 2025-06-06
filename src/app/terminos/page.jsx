@@ -143,6 +143,9 @@ export default function Terminos() {
             <strong>Mercado Pago</strong>
           </li>
           <li>
+            <strong>Transferencia Bancaria</strong>
+          </li>
+          <li>
             <strong>Criptomonedas</strong> (previa coordinación y confirmación)
           </li>
         </ul>
@@ -185,6 +188,7 @@ export default function Terminos() {
             href="mailto:codeluxetech@gmail.com"
             rel="noopener noreferrer nofollow"
             aria-label="Correo de Codeluxe"
+            target="_blank"
             className="font-semibold text-primary hover:underline"
           >
             codeluxetech@gmail.com
