@@ -1,7 +1,7 @@
 "use client";
 import { useRef } from "react";
 
-export default function SubmitButton() {
+export default function SubmitButton({loading}) {
   const btnRef = useRef(null);
 
   const handleMouseMove = (e) => {
@@ -15,11 +15,13 @@ export default function SubmitButton() {
   return (
     <button
       ref={btnRef}
+      type="submit"
       aria-label="Enviar formulario"
       onMouseMove={handleMouseMove}
-      className="relative overflow-hidden px-6 w-full text-primary-txt py-3 rounded-xl bg-secondary cursor-pointer font-light transition-all duration-200 group"
+      className={`relative overflow-hidden px-6 w-full text-primary-txt py-3 rounded-xl bg-secondary cursor-pointer font-light transition-all duration-200 group ${loading && "opacity-30"}`}
+      disabled={loading}
     >
-      <span className="relative z-10">Enviar</span>
+      <span className="relative z-10">{loading ? "Enviando..." : "Enviar"}</span>
       <div
         className="pointer-events-none absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
         style={{

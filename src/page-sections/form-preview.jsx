@@ -5,13 +5,27 @@ import { IconFileUpload } from "@tabler/icons-react";
 import { useState } from "react";
 
 export default function FormPreview() {
+  const [formValues, setFormValues] = useState({
+    name: "",
+    email: "",
+    subject: "",
+    phone: "",
+    description: "",
+  });
+
   const [filePreviews, setFilePreviews] = useState([]);
+  const [loading, setLoading] = useState(false);
+  const [success, setSuccess] = useState(false);
+
+  function handleInputChange(e) {
+    const { name, value } = e.target;
+    setFormValues((prev) => ({ ...prev, [name]: value }));
+  }
 
   function handleFileChange(e) {
     const files = Array.from(e.target.files);
-    const validFiles = files.filter((file) => file.size);
-    // const validFiles = files.filter((file) => file.size <= 2 * 1024 * 1024);  // Máx 2MB
-
+    const validFiles = files.filter((file) => file.size); 
+    // const validFiles = files.filter((file) => file.size <= 2 * 1024 * 1024);
     if (validFiles.length !== files.length) {
       alert("Algunos archivos superan el límite de 2MB y fueron descartados.");
     }
@@ -26,9 +40,52 @@ export default function FormPreview() {
       return newFiles;
     });
   }
+
+  async function handleSubmit(e) {
+    e.preventDefault();
+    setLoading(true);
+
+    const formData = new FormData();
+    Object.entries(formValues).forEach(([key, value]) => {
+      formData.append(key, value);
+    });
+
+    filePreviews.forEach((file) => {
+      formData.append("files", file);
+    });
+
+    try {
+      const res = await fetch("/api/propuesta", {
+        method: "POST",
+        body: formData,
+      });
+
+      if (res.ok) {
+        setSuccess(true);
+        alert("Formulario enviado con éxito.");
+        setFormValues({
+          name: "",
+          email: "",
+          subject: "",
+          phone: "",
+          description: "",
+        });
+        setFilePreviews([]);
+      } else {
+        console.error("Error:", await res.json());
+        alert("Ocurrió un error al enviar el formulario.");
+      }
+    } catch (err) {
+      console.error(err);
+      alert("Error inesperado.");
+    } finally {
+      setLoading(false);
+    }
+  }
+
   return (
     <form
-      action="#"
+      onSubmit={handleSubmit}
       className="form-propuesta text-secondary-txt flex flex-col gap-4 flex-1"
     >
       <input
@@ -36,20 +93,49 @@ export default function FormPreview() {
         type="text"
         placeholder="Nombre y Apellido"
         name="name"
+        value={formValues.name}
+        onChange={handleInputChange}
+        required
       />
 
-      <input id="email" type="email" placeholder="Correo" name="email" />
+      <input
+        id="email"
+        type="email"
+        placeholder="Correo"
+        name="email"
+        value={formValues.email}
+        onChange={handleInputChange}
+        required
+      />
 
-      <input id="subject" type="text" placeholder="Asunto" name="subject" />
+      <input
+        id="subject"
+        type="text"
+        placeholder="Asunto"
+        name="subject"
+        value={formValues.subject}
+        onChange={handleInputChange}
+      />
 
-      <input id="phone" type="text" placeholder="Teléfono" name="phone" />
+      <input
+        id="phone"
+        type="text"
+        placeholder="Teléfono"
+        name="phone"
+        value={formValues.phone}
+        onChange={handleInputChange}
+        required
+      />
 
       <div className="coolinput relative">
         <textarea
           id="description"
           placeholder="Mensaje"
           name="description"
+          value={formValues.description}
+          onChange={handleInputChange}
           className="input"
+          required
         ></textarea>
 
         <label
@@ -60,14 +146,6 @@ export default function FormPreview() {
           <IconFileUpload />
         </label>
 
-        {/* <input
-        id="uploadFile"
-        type="file"
-        multiple
-        name="reference"
-        className="hidden"
-      /> */}
-
         <input
           id="uploadFile"
           type="file"
@@ -75,6 +153,7 @@ export default function FormPreview() {
           name="reference"
           className="hidden"
           onChange={handleFileChange}
+          accept=".zip,.rar,.pdf,.jpg,.jpeg,.png"
         />
       </div>
 
@@ -106,7 +185,7 @@ export default function FormPreview() {
         </div>
       )}
 
-      <SubmitButton />
+      <SubmitButton loading={loading} />
     </form>
   );
 }
