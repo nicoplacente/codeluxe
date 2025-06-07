@@ -2,6 +2,7 @@ import { Montserrat } from "next/font/google";
 import "./globals.css";
 import Header from "@/page-sections/header";
 import Footer from "@/page-sections/footer";
+import { Toaster } from "sonner";
 
 const montserrat = Montserrat({
   subsets: ["latin"],
@@ -69,6 +70,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="es">
       <body className={`${montserrat.className} antialiased`}>
+        <Toaster richColors closeButton />
         <div className="fixed inset-0 -z-10 h-full w-full bg-[linear-gradient(to_right,#fff1_1px,transparent_1px),linear-gradient(to_bottom,#fff1_1px,transparent_1px)] bg-[size:7rem_12rem]"></div>
         <Header />
         <main className="max-w-4xl w-full mx-auto my-12 flex justify-center flex-col gap-9 px-4 lg:px-0">

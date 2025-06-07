@@ -116,12 +116,12 @@ export const navOptions = [
     icon: IconBrandInstagram,
     target: "_blank",
   },
-  {
-    title: "TikTok",
-    href: "https://www.tiktok.com/@codeluxe3",
-    icon: IconBrandTiktok,
-    target: "_blank",
-  },
+  // {
+  //   title: "TikTok",
+  //   href: "https://www.tiktok.com/@codeluxe3",
+  //   icon: IconBrandTiktok,
+  //   target: "_blank",
+  // },
 ];
 
 export const FAQs = [

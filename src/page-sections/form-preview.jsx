@@ -1,7 +1,8 @@
 "use client";
 
 import SubmitButton from "@/components/submit-button";
-import { IconFileUpload ,IconFileFilled } from "@tabler/icons-react";
+import { showAlerts } from "@/utils/alerts";
+import { IconFileUpload, IconFileFilled } from "@tabler/icons-react";
 import { useState } from "react";
 
 export default function FormPreview() {
@@ -24,11 +25,14 @@ export default function FormPreview() {
 
   function handleFileChange(e) {
     const files = Array.from(e.target.files);
-    const validFiles = files.filter((file) => file.size); 
-    // const validFiles = files.filter((file) => file.size <= 2 * 1024 * 1024);
-    if (validFiles.length !== files.length) {
-      alert("Algunos archivos superan el límite de 2MB y fueron descartados.");
-    }
+    const validFiles = files.filter((file) => file.size);
+    // const validFiles = files.filter((file) => file.size <= 2 * 1024 * 1024); // 2 MB
+    // if (validFiles.length !== files.length) {
+    //   showAlerts(
+    //     "warning",
+    //     "Algunos archivos superan el límite de 2MB y fueron descartados."
+    //   );
+    // }
 
     setFilePreviews((prev) => [...prev, ...validFiles]);
   }
@@ -62,7 +66,7 @@ export default function FormPreview() {
 
       if (res.ok) {
         setSuccess(true);
-        alert("Formulario enviado con éxito.");
+        showAlerts("success", "Formulario enviado con éxito.");
         setFormValues({
           name: "",
           email: "",
@@ -72,12 +76,10 @@ export default function FormPreview() {
         });
         setFilePreviews([]);
       } else {
-        console.error("Error:", await res.json());
-        alert("Ocurrió un error al enviar el formulario.");
+        showAlerts("error", "Ocurrió un error al enviar el formulario.");
       }
     } catch (err) {
-      console.error(err);
-      alert("Error inesperado.");
+      showAlerts("Error inesperado.");
     } finally {
       setLoading(false);
     }
@@ -170,7 +172,9 @@ export default function FormPreview() {
                   alt={`Vista previa de ${file.name}`}
                   className="size-8 sm:size-10 object-cover rounded-xl"
                 />
-              ):<IconFileFilled className="size-8 sm:size-14"/> }
+              ) : (
+                <IconFileFilled className="size-8 sm:size-14" />
+              )}
               <span className="max-w-[120px] truncate">{file.name}</span>
               <button
                 type="button"
