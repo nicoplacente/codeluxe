@@ -95,47 +95,51 @@ nav {
 
 .arrow-trail {
   position: relative;
-  display: inline-block;
-  width: 50px; /* Aumentamos el ancho para que entren las flechas separadas */
+  width: 100px;
   height: 1em;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  pointer-events: none;
+  left: 2px;
 }
 
 .arrow-trail span {
   position: absolute;
-  top: 0;
+  width: 100%;
+  font-size: 1.25rem;
   color: inherit;
   opacity: 0;
-  animation: arrowTrailAnim 1.5s linear infinite;
+  animation: arrowTrail 1s linear infinite;
 }
 
-/* Separamos horizontalmente cada flecha en su punto de partida */
 .arrow-trail span:nth-child(1) {
-  left: 0px;
+  left: -7px;
   animation-delay: 0s;
 }
 .arrow-trail span:nth-child(2) {
-  left: 10px;
+  left: 0;
   animation-delay: 0.2s;
 }
 .arrow-trail span:nth-child(3) {
-  left: 20px;
+  left: 7px;
   animation-delay: 0.4s;
 }
 
-@keyframes arrowTrailAnim {
+@keyframes arrowTrail {
   0% {
     opacity: 0;
     transform: translateX(0);
   }
-  10% {
-    opacity: 0.5;
-  }
-  50% {
+  20% {
     opacity: 1;
+  }
+  60% {
+    opacity: 0.4;
   }
   100% {
     opacity: 0;
-    transform: translateX(30px);
+    transform: translateX(10px);
   }
 }
 

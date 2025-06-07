@@ -33,7 +33,7 @@ export default function Info() {
           <article className="flex gap-4">
             <img
               className="size-20 object-cover rounded-full"
-              src="/nicoplacente.jpeg"
+              src="/nicoplacente.webp"
               alt="Nicolás Placente"
             />
             <div className="flex flex-col items-start gap-2">
@@ -55,7 +55,7 @@ export default function Info() {
           <article className="flex gap-4">
             <img
               className="size-20 object-cover rounded-full"
-              src="tiago.jpg"
+              src="tiago.webp"
               alt="Tiago Navarro"
             />
             <div className="flex flex-col items-start gap-2">

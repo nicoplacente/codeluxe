@@ -1,5 +1,4 @@
 import SubTitle from "@/ui/sub-title";
-import { IconChevronRight } from "@tabler/icons-react";
 
 export default function CardProccess({ title, svgIcon, isArrow }) {
   const Icon = svgIcon;
@@ -10,7 +9,7 @@ export default function CardProccess({ title, svgIcon, isArrow }) {
         <SubTitle className="text-sm">{title}</SubTitle>
       </div>
       {isArrow && (
-        <div className="arrow-trail text-primary text-2xl px-2">
+        <div className="arrow-trail text-primary rotate-90 top-[42px] sm:rotate-0 sm:top-0">
           <span>›</span>
           <span>›</span>
           <span>›</span>
