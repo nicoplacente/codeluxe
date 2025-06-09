@@ -26,7 +26,7 @@ export const benefits = [
     icon: IconChartBarPopular,
   },
   {
-    title: "Imágen profesional inmediata",
+    title: "Imagen profesional inmediata",
     description: "Llevá tu presencia online al siguiente nivel",
     icon: IconShieldDollar,
   },
