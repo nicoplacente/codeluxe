@@ -1,9 +1,9 @@
 import Link from "next/link";
 export default function Footer() {
   return (
-    <footer className="bg-secondary shadow-sm">
-      <div className="w-full max-w-4xl mx-auto p-4 sm:p-0 md:py-8">
-        <div className="sm:flex sm:items-center sm:justify-between">
+    <footer className="shadow-sm">
+      <div className="w-full max-w-4xl mx-auto p-4 lg:px-0 md:py-8">
+        <div className="sm:flex flex-col md:flex-row sm:gap-4 lg:gap-0 md:items-center md:justify-between">
           <Link
             href="/"
             aria-label="Inicio"
