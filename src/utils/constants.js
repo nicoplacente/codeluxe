@@ -129,7 +129,7 @@ export const FAQs = [
     id: 1,
     question:
       "¿Puedo contratar o cancelar los servicios opcionales en cualquier momento?",
-    p1: "Sí, los servicios opcionales pueden contratarse o cancelarse en cualquier momento. Podés elegir uno o varios según tus necesidades, y si contratás todos juntos, accedés a un <strong>descuento exclusivo</strong>.",
+    p1: "Sí, los servicios opcionales pueden contratarse o cancelarse en cualquier momento. Podés elegir uno o varios según tus necesidades, y si contratás todos juntos, accedés a un descuento exclusivo.",
     p2: "Solo abonás el desarrollo de la app o página web como un pago único. Incluye un dominio gratuito del tipo tu-pagina.vercel.app. Más adelante podés contratar mantenimiento o dominio personalizado y profesional si lo deseás.",
   },
   {
