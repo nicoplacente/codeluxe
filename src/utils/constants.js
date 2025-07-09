@@ -129,8 +129,22 @@ export const FAQs = [
     id: 1,
     question:
       "¿Puedo contratar o cancelar los servicios opcionales en cualquier momento?",
-    p1: "Sí, los servicios opcionales pueden contratarse o cancelarse en cualquier momento. Podés elegir uno o varios según tus necesidades, y si contratás todos juntos, accedés a un descuento exclusivo.",
-    p2: "Solo abonás el desarrollo de la app o página web como un pago único. Incluye un dominio gratuito del tipo tu-pagina.vercel.app. Más adelante podés contratar mantenimiento o dominio personalizado y profesional si lo deseás.",
+    p1: (
+      <>
+        Sí, los servicios opcionales pueden contratarse o cancelarse en
+        cualquier momento. Podés elegir uno o varios según tus necesidades, y si
+        contratás todos juntos, accedés a un{" "}
+        <strong>descuento exclusivo</strong>.
+      </>
+    ),
+    p2: (
+      <>
+        Solo abonás el desarrollo de la app o página web como un pago único.
+        Incluye un dominio gratuito del tipo tu-pagina.vercel.app. Más adelante
+        podés contratar mantenimiento o dominio{" "}
+        <strong>personalizado y profesional</strong> si lo deseás.
+      </>
+    ),
   },
   {
     id: 2,
@@ -148,6 +162,13 @@ export const FAQs = [
     id: 4,
     question: "¿Cómo se realiza la contratación y qué métodos de pago aceptan?",
     p1: "Para comenzar, se definen los requisitos y se realiza un anticipo del 50%. El resto se abona al finalizar luego de ser entregada la página.",
-    p2: "Aceptamos Mercado Pago, Transferencia Bancaria y Criptomonedas.",
+    p2: (
+      <>
+        <strong>
+          Aceptamos Mercado Pago, Transferencia Bancaria y Criptomonedas
+        </strong>
+        .
+      </>
+    ),
   },
 ];
