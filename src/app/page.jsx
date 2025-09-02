@@ -15,8 +15,10 @@ export default function Home() {
       <SectionContainer>
         <Title>Impulsamos tu marca con diseño web estratégico</Title>
         <Paragraph className="text-sm">
-          Landing pages, tiendas, sistemas... con diseño a medida enfocado en
-          ventas
+          +3 años de experiencia en la creación de portfolios, landings, tiendas
+          online y proyectos profesionales, identidad visual y estrategias de
+          marketing digital orientadas a que creativos y profesionales consigan
+          clientes o empleo de manera autónoma.
         </Paragraph>
 
         <CallToAction />

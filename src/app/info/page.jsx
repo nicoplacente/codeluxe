@@ -3,6 +3,7 @@ import CallToAction from "@/components/call-to-action";
 import Paragraph from "@/ui/paragraph";
 import Title from "@/ui/title";
 import PortfolioButtons from "@/ui/portfolio-button";
+import Highlight from "@/components/Highlight";
 
 export default function Info() {
   return (
@@ -10,27 +11,36 @@ export default function Info() {
       <SectionContainer>
         <Title>¿Quiénes somos?</Title>
         <Paragraph className="text-sm">
-          Equipo de desarrolladores apasionados por crear soluciones digitales
-          simples, efectivas y con una estética moderna.
+          Equipo de desarrolladores apasionados por crear{" "}
+          <Highlight color="text-primary">
+            soluciones digitales simples, efectivas y con una estética moderna.
+          </Highlight>
         </Paragraph>
 
         <Paragraph className="text-sm">
-          Nuestra misión es acompañar a negocios, marcas y emprendedores en su
-          transformación digital, ofreciéndoles herramientas personalizadas,
-          funcionales y fáciles de usar.
+          Nuestra misión es{" "}
+          <Highlight>acompañar a negocios, marcas y emprendedores</Highlight> en
+          su transformación digital, ofreciéndoles{" "}
+          <Highlight color="text-primary">
+            herramientas personalizadas, funcionales y fáciles de usar.
+          </Highlight>
         </Paragraph>
 
         <Paragraph className="text-sm">
-          Somos jóvenes, creativos, responsables y estamos convencidos de que la
-          tecnología puede hacer que cualquier negocio brille. En Codeluxe, cada
-          proyecto es una oportunidad para crecer, innovar y dejar huella.
+          Somos <Highlight>jóvenes, creativos, responsables</Highlight> y
+          estamos convencidos de que{" "}
+          <Highlight color="text-primary">
+            la tecnología puede hacer que cualquier negocio brille.
+          </Highlight>{" "}
+          En <Highlight>Codeluxe</Highlight>, cada proyecto es una oportunidad
+          para <Highlight>crecer, innovar y dejar huella.</Highlight>
         </Paragraph>
 
         <CallToAction />
       </SectionContainer>
       <div className="flex flex-col md:flex-row gap-6">
-        <SectionContainer className="md:aspect-video">
-          <article className="flex gap-4">
+        <SectionContainer>
+          <article className="flex items-center gap-4">
             <img
               className="size-20 object-cover rounded-full"
               src="/nicoplacente.webp"
@@ -46,13 +56,13 @@ export default function Info() {
               </PortfolioButtons>
             </div>
           </article>
-          <Paragraph className="text-sm">
+          {/* <Paragraph className="text-sm">
             Desarrollador fullstack especializado en frontend, copywriter y
             productor musical.
-          </Paragraph>
+          </Paragraph> */}
         </SectionContainer>
-        <SectionContainer className="md:aspect-video">
-          <article className="flex gap-4">
+        <SectionContainer>
+          <article className="flex items-center gap-4">
             <img
               className="size-20 object-cover rounded-full"
               src="tiago.webp"
@@ -69,9 +79,9 @@ export default function Info() {
             </div>
           </article>
 
-          <Paragraph className="text-sm">
+          {/* <Paragraph className="text-sm">
             Desarrollador fullstack especializado en backend.
-          </Paragraph>
+          </Paragraph> */}
         </SectionContainer>
       </div>
     </div>
