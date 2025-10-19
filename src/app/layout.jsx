@@ -28,6 +28,7 @@ export const metadata = {
     "tienda online",
   ],
   metadataBase: new URL("https://codeluxe.vercel.app"),
+
   openGraph: {
     title: "Codeluxe",
     description:
@@ -38,22 +39,25 @@ export const metadata = {
     type: "website",
     images: [
       {
-        url: "/logo-codeluxe.webp",
-        width: 630,
-        height: 630,
+        url: "https://codeluxe.vercel.app/logo-codeluxe-metadata.png",
+        width: 256,
+        height: 256,
         alt: "Codeluxe - Desarrollo Web",
       },
     ],
   },
+
   twitter: {
     card: "summary_large_image",
     title: "Codeluxe",
     description:
-      "Desarrollo de sitios y aplicaciones web modernas, rápidas y seguras para emprendedores y negocios.",
-    images: ["/logo-codeluxe.webp"],
+      "Codeluxe crea sitios y aplicaciones web modernas, rápidas y seguras para emprendedores y negocios.",
+    images: ["https://codeluxe.vercel.app/logo-codeluxe-metadata.png"],
   },
+
   authors: [{ name: "Codeluxe", url: "https://codeluxe.vercel.app" }],
   creator: "Codeluxe",
+
   robots: {
     index: true,
     follow: true,

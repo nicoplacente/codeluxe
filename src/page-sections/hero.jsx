@@ -9,6 +9,7 @@ export default function Hero() {
         height={300}
         alt="Logo Codeluxe"
         className="rounded-xl [box-shadow:0_0_100px_#1e2e39]"
+        fetchPriority="high"
       />
       <div className="flex flex-col gap-6">
         <blockquote className="pl-6 border-l-4 border-primary text-pretty text-white/90 italic text-xl md:text-2xl font-light">
