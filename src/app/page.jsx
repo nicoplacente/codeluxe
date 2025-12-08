@@ -6,7 +6,6 @@ import SubTitle from "@/ui/sub-title";
 import CardProccess from "@/components/card-proccess";
 import { benefits, ownProcess, services } from "@/utils/constants";
 import Hero from "@/page-sections/hero";
-import Link from "next/link";
 import FAQs from "@/page-sections/faqs";
 
 export default function Home() {
@@ -105,8 +104,8 @@ export default function Home() {
         </Paragraph>
 
         <CallToAction
-          href="/enlace-a-calendly"
-          ariaLabel="Reservar Reunión de Consultas Gratuita"
+          href="https://calendly.com/codeluxetech/30min"
+          ariaLabel="Reservar Reunión de Consultas Gratuita en Calendly"
           target="_blank"
           rel="noopener noreferrer nofollow"
         >
