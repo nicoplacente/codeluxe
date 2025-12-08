@@ -3,7 +3,7 @@ import CallToAction from "@/components/call-to-action";
 import Paragraph from "@/ui/paragraph";
 import Title from "@/ui/title";
 import PortfolioButtons from "@/ui/portfolio-button";
-import Highlight from "@/components/highlight";
+// import Highlight from "@/components/highlight";
 
 export default function Info() {
   return (
@@ -12,21 +12,21 @@ export default function Info() {
         <Title>¿Quiénes somos?</Title>
         <Paragraph className="text-sm">
           Equipo de desarrolladores apasionados por crear{" "}
-          <Highlight color="text-primary">
+          {/* <Highlight color="text-primary">
             soluciones digitales simples, efectivas y con una estética moderna.
-          </Highlight>
+          </Highlight> */}
         </Paragraph>
 
         <Paragraph className="text-sm">
           Nuestra misión es{" "}
           <Highlight>acompañar a negocios, marcas y emprendedores</Highlight> en
           su transformación digital, ofreciéndoles{" "}
-          <Highlight color="text-primary">
+          {/* <Highlight color="text-primary">
             herramientas personalizadas, funcionales y fáciles de usar.
-          </Highlight>
+          </Highlight> */}
         </Paragraph>
 
-        <Paragraph className="text-sm">
+        {/* <Paragraph className="text-sm">
           Somos <Highlight>jóvenes, creativos, responsables</Highlight> y
           estamos convencidos de que{" "}
           <Highlight color="text-primary">
@@ -34,7 +34,7 @@ export default function Info() {
           </Highlight>{" "}
           En <Highlight>Codeluxe</Highlight>, cada proyecto es una oportunidad
           para <Highlight>crecer, innovar y dejar huella.</Highlight>
-        </Paragraph>
+        </Paragraph> */}
 
         <CallToAction href="/propuesta" ariaLabel="Enviá tu propuesta">
           Enviá tu propuesta
