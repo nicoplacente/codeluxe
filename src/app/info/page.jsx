@@ -1,9 +1,9 @@
-import SectionContainer from "@/components/section-container";
-import CallToAction from "@/components/call-to-action";
-import Paragraph from "@/ui/paragraph";
-import Title from "@/ui/title";
-import PortfolioButtons from "@/ui/portfolio-button";
-import Highlight from "@/components/highlight";
+import SectionContainer from "../../components/section-container";
+import CallToAction from "../../components/call-to-action";
+import Paragraph from "../../ui/paragraph";
+import Title from "../../ui/title";
+import PortfolioButtons from "../../ui/portfolio-button";
+import Highlight from "../../components/highlight";
 
 export default function Info() {
   return (
