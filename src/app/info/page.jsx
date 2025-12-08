@@ -19,7 +19,7 @@ export default function Info() {
 
         <Paragraph className="text-sm">
           Nuestra misión es{" "}
-          <Highlight>acompañar a negocios, marcas y emprendedores</Highlight> en
+          {/* <Highlight>acompañar a negocios, marcas y emprendedores</Highlight> en */}
           su transformación digital, ofreciéndoles{" "}
           {/* <Highlight color="text-primary">
             herramientas personalizadas, funcionales y fáciles de usar.
