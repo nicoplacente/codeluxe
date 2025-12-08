@@ -1,9 +1,9 @@
 "use client";
 
 import SubmitButton from "@/components/submit-button";
-import { showAlerts } from "@/utils/alerts";
 import { IconFileUpload, IconFileFilled } from "@tabler/icons-react";
 import { useState } from "react";
+import { toast } from "sonner";
 
 export default function FormPreview() {
   const [formValues, setFormValues] = useState({
@@ -28,8 +28,7 @@ export default function FormPreview() {
     const validFiles = files.filter((file) => file.size);
     // const validFiles = files.filter((file) => file.size <= 2 * 1024 * 1024); // 2 MB
     // if (validFiles.length !== files.length) {
-    //   showAlerts(
-    //     "warning",
+    //   toast.warning(
     //     "Algunos archivos superan el límite de 2MB y fueron descartados."
     //   );
     // }
@@ -66,7 +65,7 @@ export default function FormPreview() {
 
       if (res.ok) {
         setSuccess(true);
-        showAlerts("success", "Formulario enviado con éxito.");
+        toast.success("Solicitud enviada con éxito.");
         setFormValues({
           name: "",
           email: "",
@@ -76,10 +75,10 @@ export default function FormPreview() {
         });
         setFilePreviews([]);
       } else {
-        showAlerts("error", "Ocurrió un error al enviar el formulario.");
+        toast.error("Ocurrió un error al enviar la solicitud.");
       }
     } catch (err) {
-      showAlerts("Error inesperado.");
+      toast.error("Error inesperado.");
     } finally {
       setLoading(false);
     }
@@ -141,7 +140,7 @@ export default function FormPreview() {
         ></textarea>
 
         <label
-          className="absolute bottom-0 right-0 cursor-pointer p-2 active:text-primary hover:bg-black/20 rounded-xl transition-colors"
+          className="absolute bottom-0 right-0 cursor-pointer active:text-primary hover:text-primary/70 p-2 transition-colors"
           htmlFor="uploadFile"
           title="Adjuntar archivo"
         >
@@ -166,16 +165,18 @@ export default function FormPreview() {
               key={index}
               className="flex justify-between items-center gap-2 text-sm w-full border border-primary/30 rounded-xl px-3 py-2 bg-black/10 relative"
             >
-              {file.type.startsWith("image/") ? (
-                <img
-                  src={URL.createObjectURL(file)}
-                  alt={`Vista previa de ${file.name}`}
-                  className="size-8 sm:size-10 object-cover rounded-xl"
-                />
-              ) : (
-                <IconFileFilled className="size-8 sm:size-14" />
-              )}
-              <span className="max-w-[120px] truncate">{file.name}</span>
+              <div className="flex items-center gap-2">
+                {file.type.startsWith("image/") ? (
+                  <img
+                    src={URL.createObjectURL(file)}
+                    alt={`Vista previa de ${file.name}`}
+                    className="size-8 sm:size-10 object-cover rounded-xl"
+                  />
+                ) : (
+                  <IconFileFilled className="size-8 sm:size-14" />
+                )}
+                <span className="max-w-[120px] truncate">{file.name}</span>
+              </div>
               <button
                 type="button"
                 onClick={() => removeFile(index)}

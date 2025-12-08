@@ -87,7 +87,25 @@ nav {
   }
 
   100% {
-    max-width: 896px;
+    max-width: 1024px;
+  }
+}
+
+/* Hero animation height */
+
+.animate-min-height {
+  animation-name: hero-height-animation;
+  animation-fill-mode: both;
+  animation-timeline: scroll();
+  animation-range: 0 300px;
+}
+
+@keyframes hero-height-animation {
+  0% {
+    min-height: 65vh;
+  }
+  100% {
+    min-height: 20vh;
   }
 }
 

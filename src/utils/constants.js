@@ -2,7 +2,6 @@ import {
   IconBellRinging,
   IconBrandInstagram,
   IconBrandLinkedin,
-  IconBrandTiktok,
   IconBrandWhatsapp,
   IconBrush,
   IconBulb,
@@ -17,7 +16,13 @@ import {
   IconSeo,
   IconStackBack,
   IconProgressCheck,
+  IconMessage,
+  IconZoomQuestion,
+  IconCurrencyDollar,
+  IconReportSearch,
+  IconBrandZoom,
 } from "@tabler/icons-react";
+import Link from "next/link";
 
 export const benefits = [
   {
@@ -85,89 +90,154 @@ export const ownProcess = [
   },
 ];
 
-export const navOptions = [
-  {
-    title: "Sobre Nosotros",
-    href: "/info",
-    icon: IconInfoCircle,
-    target: "_self",
-  },
+export const contactOptions = [
   {
     title: "Whatsapp",
-    href: "https://wa.me/2926402409",
+    href: "https://wa.me/5492926402409",
     icon: IconBrandWhatsapp,
-    target: "_blank",
   },
   {
     title: "Correo",
     href: "mailto:codeluxetech@gmail.com",
     icon: IconMail,
-    target: "_blank",
   },
   {
     title: "Linkedin",
     href: "https://www.linkedin.com/company/codeluxee/",
     icon: IconBrandLinkedin,
-    target: "_blank",
   },
   {
     title: "Instagram",
     href: "https://www.instagram.com/codeluxe_/",
     icon: IconBrandInstagram,
-    target: "_blank",
   },
-  // {
-  //   title: "TikTok",
-  //   href: "https://www.tiktok.com/@codeluxe3",
-  //   icon: IconBrandTiktok,
-  //   target: "_blank",
-  // },
+];
+
+export const navOptions = [
+  {
+    title: "Sobre Nosotros",
+    href: "/info",
+    icon: IconInfoCircle,
+  },
+  {
+    title: "Beneficios",
+    href: "/#beneficios",
+    icon: IconCurrencyDollar,
+  },
+  {
+    title: "Reservar Reunión",
+    href: "/#consultas",
+    icon: IconBrandZoom,
+  },
+  {
+    title: "Auditoria",
+    href: "/#auditoria",
+    icon: IconReportSearch,
+  },
+  {
+    title: "Preguntas frecuentes",
+    href: "/#faqs",
+    icon: IconZoomQuestion,
+  },
+  {
+    title: "Contacto",
+    href: "/#contacto",
+    icon: IconMessage,
+  },
 ];
 
 export const FAQs = [
   {
     id: 1,
-    question:
-      "¿Puedo contratar o cancelar los servicios opcionales en cualquier momento?",
+    question: "¿Puedo no pagar mensualmente?",
     p1: (
       <>
-        Sí, los servicios opcionales pueden contratarse o cancelarse en
-        cualquier momento. Podés elegir uno o varios según tus necesidades, y si
-        contratás todos juntos, accedés a un{" "}
-        <strong>descuento exclusivo</strong>.
+        Sí, es posible únicamente en el caso de{" "}
+        <strong>aplicaciones de gestión</strong> que funcionen con una{" "}
+        <strong>base de datos local</strong>. Sin embargo, recomendamos abonar
+        el <strong>servicio mensual del servidor</strong>, ya que ofrece
+        beneficios esenciales como:{" "}
+        <strong>copias de seguridad automáticas</strong>,{" "}
+        <strong>mantenimiento constante</strong>,{" "}
+        <strong>mayor seguridad</strong> y{" "}
+        <strong>acceso multiplataforma</strong>. Para el resto de los proyectos
+        —incluyendo <strong>sitios web</strong> y{" "}
+        <strong>tiendas online</strong>— el pago mensual es{" "}
+        <strong>obligatorio</strong> debido al mantenimiento del servidor, las
+        copias de seguridad, seguridad activa y porque{" "}
+        <strong>deben ser accesibles públicamente</strong>.
       </>
     ),
     p2: (
       <>
-        Solo abonás el desarrollo de la app o página web como un pago único.
-        Incluye un dominio gratuito del tipo tu-pagina.vercel.app. Más adelante
-        podés contratar mantenimiento o dominio{" "}
-        <strong>personalizado y profesional</strong> si lo deseás.
+        Si no deseás contratar un dominio anual, ofrecemos sin costo un{" "}
+        <strong>dominio gratuito</strong> del tipo{" "}
+        <strong>tu-pagina.vercel.app</strong>. Más adelante podés adquirir un{" "}
+        <strong>dominio personalizado y profesional</strong> cuando lo
+        consideres necesario. Aun así, recomendamos invertir en un dominio
+        propio, ya que suele ser <strong>económico</strong> y mejora
+        significativamente la <strong>presencia y credibilidad</strong> de tu
+        marca en internet.
       </>
     ),
   },
   {
     id: 2,
     question: "¿Hay reembolsos si cancelo el proyecto o un servicio?",
-    p1: "No. El pago por la app o web es sin reembolso: se abona 50% al iniciar y 50% al finalizar. En el caso de los servicios adicionales (mantenimiento, dominio, etc.).",
-    p2: "Podés dejar de pagarlos, darlos de baja o volver a contratarlos en cualquier momento sin penalidad.",
+    p1: (
+      <>
+        No. El pago por la app o sitio web es sin reembolso. Los pagos
+        realizados corresponden a tiempo, planificación y trabajo invertido, y{" "}
+        <strong>no son reversibles</strong>.
+      </>
+    ),
   },
   {
     id: 3,
     question: "¿Cuánto tiempo demora el desarrollo de una web o aplicación?",
-    p1: "Depende de la complejidad del proyecto. Una landing page simple puede entregarse en 2 a 5 días hábiles. Un desarrollo más personalizado puede demorar entre 1 y 4 semanas. En casos complejos, el plazo puede ser indeterminado, pero siempre será informado con anticipación.",
-    p2: "El proceso comienza una vez realizado el primer pago del 50%, y no se entrega el producto final ni se habilita el dominio hasta completar el 100% del pago, según lo establecido en los términos y condiciones.",
+    p1: "La duración del desarrollo dependerá de la complejidad y personalización del proyecto: Mínimo estimado: 2 días hábiles. Máximo estimado: 1 mes. En casos complejos, el plazo podrá ser indeterminado, lo cual se informará previamente.",
+
+    p2: "El proceso comienza una vez realizado el primer pago del 50%, y no se entregará el producto final ni se habilitará el dominio hasta completar el 100% del pago, según lo establecido en los términos y condiciones.",
   },
   {
     id: 4,
-    question: "¿Cómo se realiza la contratación y qué métodos de pago aceptan?",
+    question: "¿Cómo se realiza la contratación?",
     p1: "Para comenzar, se definen los requisitos y se realiza un anticipo del 50%. El resto se abona al finalizar luego de ser entregada la página.",
     p2: (
       <>
         <strong>
-          Aceptamos Mercado Pago, Transferencia Bancaria y Criptomonedas
+          Luego puedes enviar tu propuesta desde{" "}
+          <Link
+            href="/propuesta"
+            aria-label="Enviar propuesta"
+            className="font-semibol text-primary hover:underline"
+          >
+            aquí
+          </Link>{" "}
+          o contactarnos directamente por{" "}
+          <Link
+            href={`https://wa.me/5492926402409?text=${encodeURIComponent(
+              "Hola! Quiero contratar tu servicio."
+            )}`}
+            className="font-semibol text-primary hover:underline"
+            aria-label="Contactar por Whatsapp"
+            target="_blank"
+            rel="noopener noreferrer nofollow"
+          >
+            Whatsapp
+          </Link>
         </strong>
         .
+      </>
+    ),
+  },
+  {
+    id: 5,
+    question: "¿Qué métodos de pago aceptan?",
+    p1: (
+      <>
+        Aceptamos{" "}
+        <strong>Mercado Pago, Transferencia Bancaria y Criptomonedas</strong>.
       </>
     ),
   },

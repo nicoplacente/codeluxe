@@ -3,11 +3,11 @@ import CallToAction from "@/components/call-to-action";
 import Paragraph from "@/ui/paragraph";
 import Title from "@/ui/title";
 import PortfolioButtons from "@/ui/portfolio-button";
-import Highlight from "@/components/Highlight";
+import Highlight from "@/components/highlight";
 
 export default function Info() {
   return (
-    <div className="flex flex-col gap-6 w-full max-w-4xl mx-auto my-12">
+    <div className="flex flex-col gap-6 w-full max-w-4xl mx-auto sm:my-12">
       <SectionContainer>
         <Title>¿Quiénes somos?</Title>
         <Paragraph className="text-sm">
@@ -36,7 +36,9 @@ export default function Info() {
           para <Highlight>crecer, innovar y dejar huella.</Highlight>
         </Paragraph>
 
-        <CallToAction />
+        <CallToAction href="/propuesta" ariaLabel="Enviá tu propuesta">
+          Enviá tu propuesta
+        </CallToAction>
       </SectionContainer>
       <div className="flex flex-col md:flex-row gap-6">
         <SectionContainer>

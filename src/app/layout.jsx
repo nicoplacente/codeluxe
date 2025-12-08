@@ -77,7 +77,7 @@ export default function RootLayout({ children }) {
         <Toaster richColors closeButton />
         <div className="fixed inset-0 -z-10 h-full w-full bg-[linear-gradient(to_right,#fff1_1px,transparent_1px),linear-gradient(to_bottom,#fff1_1px,transparent_1px)] bg-[size:7rem_12rem]"></div>
         <Header />
-        <main className="max-w-4xl w-full mx-auto my-12 flex justify-center flex-col gap-9 px-4 lg:px-0">
+        <main className="max-w-5xl w-full mx-auto my-12 flex justify-center flex-col gap-12 px-4 lg:px-0">
           {children}
         </main>
         <Footer />

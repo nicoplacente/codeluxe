@@ -3,7 +3,7 @@ import Link from "next/link";
 
 import { useRef } from "react";
 
-export default function CallToAction() {
+export default function CallToAction({ children, href, ariaLabel, ...props }) {
   const btnRef = useRef(null);
 
   const handleMouseMove = (e) => {
@@ -17,12 +17,13 @@ export default function CallToAction() {
   return (
     <Link
       ref={btnRef}
-      aria-label="Solicitá una propuesta"
-      href="/propuesta"
+      aria-label={ariaLabel}
+      href={href}
+      {...props}
       onMouseMove={handleMouseMove}
       className="relative overflow-hidden px-6 w-fit text-primary-txt py-3 rounded-xl bg-secondary cursor-pointer font-light transition-all duration-200 group"
     >
-      <span className="relative z-10">Enviá tu propuesta</span>
+      <span className="relative z-10">{children}</span>
       <div
         className="pointer-events-none absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
         style={{

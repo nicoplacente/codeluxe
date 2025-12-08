@@ -1,12 +1,6 @@
 import { NextResponse } from "next/server";
 import nodemailer from "nodemailer";
 
-export const config = {
-  api: {
-    bodyParser: false,
-  },
-};
-
 export async function POST(request) {
   try {
     const formData = await request.formData();
@@ -18,13 +12,15 @@ export async function POST(request) {
     const description = formData.get("description");
 
     const files = formData.getAll("files");
-    const attachments = await Promise.all(files.map(async (file) => {
-      const arrayBuffer = await file.arrayBuffer();
-      return {
-        filename: file.name,
-        content: Buffer.from(arrayBuffer),
-      };
-    }));
+    const attachments = await Promise.all(
+      files.map(async (file) => {
+        const arrayBuffer = await file.arrayBuffer();
+        return {
+          filename: file.name,
+          content: Buffer.from(arrayBuffer),
+        };
+      })
+    );
     const transporter = nodemailer.createTransport({
       service: "gmail",
       auth: {
@@ -46,9 +42,15 @@ export async function POST(request) {
       `,
       attachments,
     });
-    return NextResponse.json({ message: "Correo enviado correctamente" }, { status: 200 });
+    return NextResponse.json(
+      { message: "Correo enviado correctamente" },
+      { status: 200 }
+    );
   } catch (err) {
     console.error("ERROR EN API:", err);
-    return NextResponse.json({ error: "Fallo al procesar la propuesta" }, { status: 500 });
+    return NextResponse.json(
+      { error: "Fallo al procesar la propuesta" },
+      { status: 500 }
+    );
   }
 }

@@ -7,6 +7,7 @@ import CardProccess from "@/components/card-proccess";
 import { benefits, ownProcess, services } from "@/utils/constants";
 import Hero from "@/page-sections/hero";
 import Link from "next/link";
+import FAQs from "@/page-sections/faqs";
 
 export default function Home() {
   return (
@@ -14,18 +15,20 @@ export default function Home() {
       <Hero />
       <SectionContainer>
         <Title>Impulsamos tu marca con diseño web estratégico</Title>
-        <Paragraph className="text-sm">
+        <Paragraph className="text-base">
           +3 años de experiencia en la creación de portfolios, landings, tiendas
           online y proyectos profesionales, identidad visual y estrategias de
           marketing digital orientadas a que creativos y profesionales consigan
           clientes o empleo de manera autónoma.
         </Paragraph>
 
-        <CallToAction />
+        <CallToAction href="/propuesta" ariaLabel="Enviá tu propuesta">
+          Enviá tu propuesta
+        </CallToAction>
       </SectionContainer>
 
-      <SectionContainer>
-        <SubTitle className="text-xl">Beneficios</SubTitle>
+      <SectionContainer id="beneficios">
+        <SubTitle className="text-2xl">Beneficios</SubTitle>
 
         <ul className="grid grid-cols-1 md:grid-cols-2 gap-4">
           {benefits.map((benefit, index) => (
@@ -33,13 +36,15 @@ export default function Home() {
               key={index}
               className="flex items-center gap-3 bg-secondary/50 p-6 border border-primary-txt/10 rounded-xl"
             >
-              <span className="text-primary  bg-primary/20 rounded-2xl p-2">
+              <span className="text-primary bg-primary/20 rounded-2xl p-2">
                 <benefit.icon className="size-9" />
               </span>
 
               <div>
-                <SubTitle className="text-sm">{benefit.title}</SubTitle>
-                <Paragraph className="text-xs">{benefit.description}</Paragraph>
+                <SubTitle className="text-base text-balance">
+                  {benefit.title}
+                </SubTitle>
+                <Paragraph className="text-sm">{benefit.description}</Paragraph>
               </div>
             </li>
           ))}
@@ -47,24 +52,7 @@ export default function Home() {
       </SectionContainer>
 
       <SectionContainer>
-        <SubTitle className="text-xl">Servicios</SubTitle>
-        <Paragraph className="text-sm">
-          Podés complementar tu sitio web con uno o más de nuestros servicios
-          opcionales:{" "}
-          <strong className="font-semibold">
-            soporte, SEO, gestión y actualizaciones
-          </strong>
-          . Contratá todos juntos y obtené un{" "}
-          <strong className="font-semibold">descuento exclusivo</strong>. Si
-          quieres mas información haz click{" "}
-          <Link
-            className="font-semibold text-primary hover:underline"
-            href="/propuesta"
-            aria-label="Más información"
-          >
-            aquí
-          </Link>
-        </Paragraph>
+        <SubTitle className="text-2xl">Servicios</SubTitle>
 
         <ul className="grid grid-cols-1 md:grid-cols-2 gap-4">
           {services.map((service, index) => (
@@ -72,13 +60,15 @@ export default function Home() {
               key={index}
               className="flex items-center gap-3 bg-secondary/50 p-6 border border-primary-txt/10 rounded-xl"
             >
-              <span className="text-primary  bg-primary/20 rounded-2xl p-2">
+              <span className="text-primary bg-primary/20 rounded-2xl p-2">
                 <service.icon className="size-9" />
               </span>
 
               <div>
-                <SubTitle className="text-sm">{service.title}</SubTitle>
-                <Paragraph className="text-xs">{service.description}</Paragraph>
+                <SubTitle className="text-base text-balance">
+                  {service.title}
+                </SubTitle>
+                <Paragraph className="text-sm">{service.description}</Paragraph>
               </div>
             </li>
           ))}
@@ -86,7 +76,7 @@ export default function Home() {
       </SectionContainer>
 
       <SectionContainer>
-        <SubTitle className="text-xl">Nuestro proceso</SubTitle>
+        <SubTitle className="text-2xl">Nuestro proceso</SubTitle>
         <article className="flex flex-col sm:flex-row justify-center items-center w-full gap-2">
           {ownProcess.map((e, index) => (
             <CardProccess
@@ -98,6 +88,63 @@ export default function Home() {
           ))}
         </article>
       </SectionContainer>
+
+      <SectionContainer id="consultas">
+        <SubTitle className="text-2xl">
+          Resuelve tus Dudas Sin Compromiso
+        </SubTitle>
+        <Paragraph className="text-base">
+          ¿Tienes preguntas específicas sobre tu proyecto, necesitas un
+          presupuesto personalizado o quieres entender mejor cómo trabajamos?
+          Agenda una
+          <strong className="font-semibold text-primary-txt">
+            {" "}
+            reunión virtual gratuita de 30 minutos
+          </strong>{" "}
+          con nuestro equipo. ¡Hablemos de tu visión!
+        </Paragraph>
+
+        <CallToAction
+          href="/enlace-a-calendly"
+          ariaLabel="Reservar Reunión de Consultas Gratuita"
+          target="_blank"
+          rel="noopener noreferrer nofollow"
+        >
+          Reservar mi Reunión Gratuita
+        </CallToAction>
+      </SectionContainer>
+
+      <SectionContainer id="auditoria">
+        <SubTitle className="text-2xl">
+          ¿Ya tienes una Web? ¡Audítala Gratis!
+        </SubTitle>
+        <Paragraph className="text-base">
+          Si ya tienes presencia online, ¡es hora de optimizarla! Te ofrecemos
+          una{" "}
+          <strong className="font-semibold text-primary-txt">
+            Auditoría Web 100% gratuita
+          </strong>{" "}
+          donde analizaremos el diseño, la usabilidad, la velocidad y el SEO de
+          tu página actual. Descubre los puntos críticos que te están impidiendo
+          conseguir más clientes o visibilidad.
+        </Paragraph>
+
+        <Paragraph className="text-sm italic p-3 rounded-lg bg-secondary/70 border border-primary/20">
+          ⚠️ **Importante:** Para garantizar un análisis enfocado en la
+          seguridad y las buenas prácticas modernas, nuestra auditoría se limita
+          exclusivamente a sitios que utilizan el protocolo **HTTPS**.
+        </Paragraph>
+
+        <CallToAction
+          href="/auditoria"
+          ariaLabel="Solicitar Auditoría Web Gratuita"
+          rel="noopener noreferrer nofollow"
+        >
+          Solicitar Auditoría Web Gratuita
+        </CallToAction>
+      </SectionContainer>
+
+      <FAQs />
     </>
   );
 }

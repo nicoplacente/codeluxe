@@ -2,7 +2,7 @@ export default function NavButton({ isOpen, toggle }) {
   return (
     <button
       onClick={toggle}
-      className="flex flex-col gap-2 w-8 cursor-pointer active:opacity-25 transition relative z-30 sm:hidden"
+      className="flex flex-col gap-2 w-8 cursor-pointer active:opacity-25 transition relative z-30 lg:hidden"
     >
       <div
         className={`rounded-2xl h-[3px] w-1/2 bg-primary duration-500 origin-right

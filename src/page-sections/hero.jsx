@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export default function Hero() {
   return (
-    <main className="flex items-center gap-20 flex-col sm:flex-row min-h-[65vh]">
+    <main className="flex items-center gap-20 flex-col sm:flex-row animate-min-height">
       <Image
         src="/logo-codeluxe.webp"
         width={300}
@@ -12,12 +12,12 @@ export default function Hero() {
         fetchPriority="high"
       />
       <div className="flex flex-col gap-6">
-        <blockquote className="pl-6 border-l-4 border-primary text-pretty text-white/90 italic text-xl md:text-2xl font-light">
+        <blockquote className="pl-6 border-l-4 border-primary text-balance text-white/90 italic text-2xl md:text-4xl font-light">
           “Tu web no es solo estética. <br /> Es tu vendedor 24/7.”
         </blockquote>
-        <blockquote className="pl-6 border-l-4 border-secondary text-white/90 italic text-xl md:text-2xl font-light">
+        {/* <blockquote className="pl-6 border-l-4 border-secondary text-white/90 italic text-xl md:text-2xl font-light">
           “No hacemos páginas. <br /> Creamos soluciones para crecer.”
-        </blockquote>
+        </blockquote> */}
       </div>
     </main>
   );
