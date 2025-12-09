@@ -21,7 +21,7 @@ export default function CallToAction({ children, href, ariaLabel, ...props }) {
       href={href}
       {...props}
       onMouseMove={handleMouseMove}
-      className="relative overflow-hidden px-6 w-fit text-primary-txt py-3 rounded-xl bg-secondary cursor-pointer font-light transition-all duration-200 group"
+      className="relative overflow-hidden px-6 w-full text-center sm:text-start sm:w-fit text-primary-txt py-3 rounded-xl bg-secondary cursor-pointer font-light transition-all duration-200 group"
     >
       <span className="relative z-10">{children}</span>
       <div

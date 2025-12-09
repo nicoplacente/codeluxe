@@ -9,7 +9,7 @@ export default function FAQs() {
   const [activeFAQ, setActiveFAQ] = useState(null);
 
   return (
-    <section id="faqs">
+    <section id="faqs" className="scroll-mt-20">
       <SubTitle className="text-2xl !text-white/90">
         Preguntas frecuentes
       </SubTitle>
