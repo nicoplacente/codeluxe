@@ -65,7 +65,7 @@ export default function FormPreview() {
 
       if (res.ok) {
         setSuccess(true);
-        toast.success("Solicitud enviada con éxito.");
+        toast.success("Propuesta enviada con éxito.");
         setFormValues({
           name: "",
           email: "",
@@ -75,7 +75,7 @@ export default function FormPreview() {
         });
         setFilePreviews([]);
       } else {
-        toast.error("Ocurrió un error al enviar la solicitud.");
+        toast.error("Ocurrió un error al enviar la propuesta.");
       }
     } catch (err) {
       toast.error("Error inesperado.");

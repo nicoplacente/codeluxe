@@ -33,6 +33,7 @@ export default function Header() {
             fetchPriority="high"
             width={48}
             height={48}
+            loading="eager"
           />
         </Link>
 

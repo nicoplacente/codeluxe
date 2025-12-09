@@ -131,7 +131,7 @@ export const navOptions = [
   },
   {
     title: "Auditoria",
-    href: "/#auditoria",
+    href: "/auditoria",
     icon: IconReportSearch,
   },
   {
@@ -236,8 +236,48 @@ export const FAQs = [
     question: "¿Qué métodos de pago aceptan?",
     p1: (
       <>
-        Aceptamos{" "}
-        <strong>Mercado Pago, Transferencia Bancaria y Criptomonedas</strong>.
+        Aceptamos <strong>Transferencia y Criptomonedas</strong>.
+      </>
+    ),
+  },
+
+  {
+    id: 6,
+    question: "¿Cuál es el costo del proyecto?",
+    p1: (
+      <>
+        El costo del desarrollo es un <strong>pago único</strong>, pero el
+        precio final puede variar según el tipo de proyecto y su complejidad. Un
+        proyecto <strong>simple</strong> puede comenzar alrededor de{" "}
+        <strong>$300.000 ARS</strong>, mientras que un proyecto{" "}
+        <strong>complejo</strong> puede costar{" "}
+        <strong>$700.000 ARS o más</strong>, dependiendo de las funcionalidades
+        necesarias.
+      </>
+    ),
+    p2: (
+      <>
+        Para recibir un presupuesto exacto, recomendamos contactarnos por{" "}
+        <Link
+          href="https://wa.me/5492926402409"
+          className="font-semibol text-primary hover:underline"
+          target="_blank"
+          rel="noopener noreferrer nofollow"
+          aria-label="Contactar por Whatsapp"
+        >
+          Whatsapp
+        </Link>{" "}
+        y contarnos tu idea. Una vez definido el proyecto, se aplicarán los
+        pagos mensuales correspondientes según lo establecido en la cláusula 6
+        de los{" "}
+        <Link
+          href="/terminos"
+          aria-label="Ver Términos y Condiciones"
+          className="font-semibol text-primary hover:underline"
+        >
+          Términos y Condiciones
+        </Link>
+        .
       </>
     ),
   },

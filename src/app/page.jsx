@@ -15,10 +15,16 @@ export default function Home() {
       <SectionContainer>
         <Title>Impulsamos tu marca con diseño web estratégico</Title>
         <Paragraph className="text-base">
-          +3 años de experiencia en la creación de portfolios, landings, tiendas
-          online y proyectos profesionales, identidad visual y estrategias de
-          marketing digital orientadas a que creativos y profesionales consigan
-          clientes o empleo de manera autónoma.
+          Transformamos tu presencia online en una herramienta que atrae
+          clientes y oportunidades. Con más de 3 años de experiencia, creamos
+          portfolios, landing pages, tiendas online, sistemas de gestión y
+          proyectos profesionales, combinando identidad visual y estrategias de
+          marketing digital diseñadas para que creativos y profesionales
+          consigan resultados reales. <br /> <br />
+          <strong className="font-semibold text-white/90">
+            Da el siguiente paso: envía tu propuesta y hagamos crecer tu
+            proyecto.
+          </strong>
         </Paragraph>
 
         <CallToAction href="/propuesta" ariaLabel="Enviá tu propuesta">
@@ -128,7 +134,7 @@ export default function Home() {
           conseguir más clientes o visibilidad.
         </Paragraph>
 
-        <Paragraph className="text-sm italic p-3 rounded-lg bg-secondary/70 border border-primary/20">
+        <Paragraph className="text-sm italic p-3 rounded-lg bg-glass-warning border border-warning">
           ⚠️ **Importante:** Para garantizar un análisis enfocado en la
           seguridad y las buenas prácticas modernas, nuestra auditoría se limita
           exclusivamente a sitios que utilizan el protocolo **HTTPS**.

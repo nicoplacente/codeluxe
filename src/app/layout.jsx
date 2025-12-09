@@ -12,7 +12,7 @@ const montserrat = Montserrat({
 export const metadata = {
   title: "Codeluxe",
   description:
-    "Codeluxe crea sitios web y aplicaciones modernas, rápidas y seguras para negocios y emprendedores. Desarrollo a medida con tecnologías actuales.",
+    "En Codeluxe creamos sitios web y aplicaciones modernas, rápidas y seguras para negocios y emprendedores. Desarrollo a medida con tecnologías actuales.",
   keywords: [
     "desarrollo web",
     "sitios web personalizados",
@@ -27,19 +27,21 @@ export const metadata = {
     "ecommerce",
     "tienda online",
   ],
-  metadataBase: new URL("https://codeluxe.vercel.app"),
-
+  metadataBase: new URL("https://codeluxe.tech"),
+  alternates: {
+    canonical: "/",
+  },
   openGraph: {
     title: "Codeluxe",
     description:
       "Codeluxe crea sitios web y aplicaciones modernas, rápidas y seguras para negocios y emprendedores. Desarrollo a medida con tecnologías actuales.",
-    url: "https://codeluxe.vercel.app",
+    url: "https://codeluxe.tech",
     siteName: "Codeluxe",
     locale: "es_AR",
     type: "website",
     images: [
       {
-        url: "https://codeluxe.vercel.app/logo-codeluxe-metadata.png",
+        url: "https://codeluxe.tech/logo-codeluxe-metadata.png",
         width: 256,
         height: 256,
         alt: "Codeluxe - Desarrollo Web",
@@ -51,11 +53,11 @@ export const metadata = {
     card: "summary_large_image",
     title: "Codeluxe",
     description:
-      "Codeluxe crea sitios y aplicaciones web modernas, rápidas y seguras para emprendedores y negocios.",
-    images: ["https://codeluxe.vercel.app/logo-codeluxe-metadata.png"],
+      "Codeluxe crea sitios web y aplicaciones modernas, rápidas y seguras para negocios y emprendedores. Desarrollo a medida con tecnologías actuales.",
+    images: ["https://codeluxe.tech/logo-codeluxe-metadata.png"],
   },
 
-  authors: [{ name: "Codeluxe", url: "https://codeluxe.vercel.app" }],
+  authors: [{ name: "Codeluxe", url: "https://codeluxe.tech" }],
   creator: "Codeluxe",
 
   robots: {

@@ -3,7 +3,7 @@ import { contactOptions } from "@/utils/constants";
 
 export default function Footer() {
   return (
-    <footer className="shadow-sm">
+    <footer id="contacto" className="shadow-sm">
       <div className="w-full max-w-4xl mx-auto p-4 lg:px-0 md:py-8">
         <div
           className="

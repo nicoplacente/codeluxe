@@ -1,7 +1,28 @@
 import Title from "@/ui/title";
-import FAQs from "@/page-sections/faqs";
 import FormPreview from "@/page-sections/form-preview";
 import Link from "next/link";
+
+export function generateMetadata() {
+  return {
+    title: "Propuesta | Codeluxe",
+    description:
+      "Envia tu propuesta para contratar nuestros servicios y obtener tu aplicación web a medida.",
+    alternates: {
+      canonical: "/propuesta",
+    },
+    openGraph: {
+      title: "Propuesta | Codeluxe",
+      description:
+        "Envia tu propuesta para contratar nuestros servicios y obtener tu aplicación web a medida.",
+      images: ["https://codeluxe.tech/og-propuesta.png"],
+    },
+    twitter: {
+      title: "Propuesta | Codeluxe",
+      description:
+        "Envia tu propuesta para contratar nuestros servicios y obtener tu aplicación web a medida.",
+    },
+  };
+}
 
 export default function Propuesta() {
   return (

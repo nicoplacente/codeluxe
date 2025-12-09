@@ -7,6 +7,8 @@
   --primary: #83cee5;
   --secondary: #1e2e39;
   --glass: #0b151daa;
+  --glass-warning: #1d1d0b;
+  --warning: #f7f74b22;
   --primary-txt: #ebf3f4;
   --secondary-txt: #bec8cd;
   --error: #f44336;
@@ -23,6 +25,8 @@
   --color-secondary-txt: var(--secondary-txt);
   --color-error: var(--error);
   --color-glass: var(--glass);
+  --color-glass-warning: var(--glass-warning);
+  --color-warning: var(--warning);
 }
 
 body {
@@ -105,6 +109,34 @@ nav {
     min-height: 65vh;
   }
   100% {
+    min-height: 20vh;
+  }
+}
+
+@media (max-width: 768px) {
+  /* Desactivar animaciones */
+  header,
+  nav,
+  .animate-min-height {
+    animation: none !important;
+    animation-timeline: none !important;
+  }
+
+  /* Estado final del header */
+  header {
+    background: #0002;
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid #83cee599;
+  }
+
+  /* Estado final del nav */
+  nav {
+    max-width: 1024px;
+    padding-inline: 16px;
+  }
+
+  /* Estado final del hero */
+  .animate-min-height {
     min-height: 20vh;
   }
 }
