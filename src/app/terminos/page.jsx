@@ -241,7 +241,7 @@ export default function Terminos() {
       <section className="mb-8">
         <h2 className="text-xl font-semibold mb-2">10. Métodos de Pago</h2>
         <ul className="list-disc ml-5 mt-2 space-y-1">
-          {/* <li>Mercado Pago</li> */}
+          <li>Efectivo</li>
           <li>Transferencia</li>
           <li>Criptomonedas</li>
         </ul>

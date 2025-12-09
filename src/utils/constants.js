@@ -236,7 +236,7 @@ export const FAQs = [
     question: "¿Qué métodos de pago aceptan?",
     p1: (
       <>
-        Aceptamos <strong>Transferencia y Criptomonedas</strong>.
+        Aceptamos <strong>Efectivo, Transferencia y Criptomonedas</strong>.
       </>
     ),
   },
