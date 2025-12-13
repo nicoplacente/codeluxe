@@ -13,6 +13,13 @@ export const metadata = {
   title: "Codeluxe",
   description:
     "En Codeluxe creamos sitios web y aplicaciones modernas, rápidas y seguras para negocios y emprendedores. Desarrollo a medida con tecnologías actuales.",
+  icons: {
+    icon: [
+      { url: "/favicon.png", type: "image/png", sizes: "256x256" },
+      { url: "/favicon.ico" },
+    ],
+    apple: "/apple-icon.png",
+  },
   keywords: [
     "desarrollo web",
     "sitios web personalizados",
@@ -26,6 +33,11 @@ export const metadata = {
     "landing page",
     "ecommerce",
     "tienda online",
+    "auditoria web gratuita",
+    "seguridad web",
+    "optimización web",
+    "desarrollo a medida",
+    "desarrollo freelance",
   ],
   metadataBase: new URL("https://codeluxe.tech"),
   alternates: {
