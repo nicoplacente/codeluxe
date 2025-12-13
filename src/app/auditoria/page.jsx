@@ -15,7 +15,7 @@ export function generateMetadata() {
       title: "Auditoría Web | Codeluxe",
       description:
         "Solicita una auditoría web gratuita y descubre los problemas de tu sitio web y cómo solucionarlos.",
-      images: ["https://codeluxe.tech/og-servicios.png"],
+      images: ["https://codeluxe.tech/logo-codeluxe-metadata.png"],
     },
     twitter: {
       title: "Auditoría Web | Codeluxe",

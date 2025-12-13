@@ -14,7 +14,7 @@ export function generateMetadata() {
       title: "Propuesta | Codeluxe",
       description:
         "Envia tu propuesta para contratar nuestros servicios y obtener tu aplicación web a medida.",
-      images: ["https://codeluxe.tech/og-propuesta.png"],
+      images: ["https://codeluxe.tech/logo-codeluxe-metadata.png"],
     },
     twitter: {
       title: "Propuesta | Codeluxe",

@@ -10,7 +10,7 @@ export function generateMetadata() {
     openGraph: {
       title: "Términos y Condiciones | Codeluxe",
       description: "Términos y condiciones de servicio de Codeluxe.",
-      images: ["https://codeluxe.tech/og-servicios.png"],
+      images: ["https://codeluxe.tech/logo-codeluxe-metadata.png"],
     },
     twitter: {
       title: "Términos y Condiciones | Codeluxe",

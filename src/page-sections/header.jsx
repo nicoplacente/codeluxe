@@ -29,7 +29,7 @@ export default function Header() {
           <Image
             src="/logo-codeluxe.webp"
             alt="Logo Codeluxe"
-            className="size-12 object-cover min-w-12 rounded-full active:scale-90 hover:contrast-50 transition cursor-pointer hover:shadow-2xl hover:shadow-primary/50"
+            className="size-12 object-cover min-w-12 rounded-full active:scale-90 hover:contrast-50 transition cursor-pointer hover:[box-shadow:0_0_50px_#83cee555]"
             fetchPriority="high"
             width={48}
             height={48}
