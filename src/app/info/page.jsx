@@ -196,7 +196,7 @@ export default function Info() {
             <div className="flex flex-col items-start gap-2">
               <h3 className="font-semibold md:text-lg">Nicolás Placente</h3>
               <PortfolioButtons
-                href="https://nicoplacente.netlify.app/"
+                href="https://nicoplacente.codeluxe.tech/"
                 aria="Portfolio de Nicolás Placente"
               >
                 Ver portfolio
@@ -216,7 +216,7 @@ export default function Info() {
             <div className="flex flex-col items-start gap-2">
               <h3 className="font-semibold md:text-lg">Tiago Navarro</h3>
               <PortfolioButtons
-                href="https://navarrotiago.vercel.app/"
+                href="https://navarrotiago.codeluxe.tech/"
                 aria="Portfolio de Tiago Navarro"
               >
                 Ver portfolio
