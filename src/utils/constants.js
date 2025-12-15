@@ -21,6 +21,7 @@ import {
   IconCurrencyDollar,
   IconReportSearch,
   IconBrandZoom,
+  IconBrandTiktok,
 } from "@tabler/icons-react";
 import Link from "next/link";
 
@@ -110,6 +111,11 @@ export const contactOptions = [
     title: "Instagram",
     href: "https://www.instagram.com/codeluxe_/",
     icon: IconBrandInstagram,
+  },
+  {
+    title: "TikTok",
+    href: "https://www.tiktok.com/@codeluxe3",
+    icon: IconBrandTiktok,
   },
 ];
 
