@@ -1,3 +1,4 @@
+import Highlighted from "@/components/highlighted";
 import {
   IconBellRinging,
   IconBrandInstagram,
@@ -126,11 +127,6 @@ export const navOptions = [
     icon: IconInfoCircle,
   },
   {
-    title: "Beneficios",
-    href: "/#beneficios",
-    icon: IconCurrencyDollar,
-  },
-  {
     title: "Reservar Reunión",
     href: "/#consultas",
     icon: IconBrandZoom,
@@ -139,6 +135,11 @@ export const navOptions = [
     title: "Auditoria",
     href: "/auditoria",
     icon: IconReportSearch,
+  },
+  {
+    title: "Nuestros Proyectos",
+    href: "/proyectos",
+    icon: IconCurrencyDollar,
   },
   {
     title: "Preguntas frecuentes",
@@ -286,5 +287,132 @@ export const FAQs = [
         .
       </>
     ),
+  },
+];
+
+export const projects = [
+  {
+    id: "gestion-inventarios",
+    title: "Gestión de Inventarios",
+    image: "/projects/gestion-inventario/gestion-inventario.webp/",
+    tagline: "Control total para organizaciones exigentes.",
+    description:
+      "Originalmente diseñado para la precisión crítica de los Bomberos Voluntarios, hoy adaptado para cualquier industria que requiera un control riguroso de activos.",
+    status: "active",
+    price: "50.000",
+    customPrice: "300.000",
+    features: [
+      {
+        title: "Múltiples inventarios centralizados",
+        description: (
+          <>
+            Administra diversas sedes o depósitos desde una única interfaz,
+            garantizando una{" "}
+            <Highlighted>visión global y unificada</Highlighted> de todos tus
+            recursos disponibles.
+          </>
+        ),
+      },
+      {
+        title: "Categorización avanzada de activos",
+        description: (
+          <>
+            Organiza tu equipamiento mediante etiquetas inteligentes y
+            jerarquías personalizadas, permitiendo{" "}
+            <Highlighted>búsquedas instantáneas</Highlighted> y un orden lógico
+            escalable.
+          </>
+        ),
+      },
+      {
+        title: "Generación de planillas de control",
+        description: (
+          <>
+            Exporta reportes y hojas de verificación técnica listas para
+            imprimir, optimizando los tiempos de auditoría física y asegurando{" "}
+            <Highlighted>uniformidad en los registros</Highlighted>.
+          </>
+        ),
+      },
+      {
+        title: "Historial completo de movimientos",
+        description: (
+          <>
+            Rastrea cada cambio con una trazabilidad absoluta. Conoce quién y
+            cuándo realizó un control de inventario para una{" "}
+            <Highlighted>transparencia operativa total</Highlighted>.
+          </>
+        ),
+      },
+    ],
+    videoPlaceholder:
+      "/projects/gestion-inventario/gestion-inventario-presentacion.mp4",
+    documentation: [
+      {
+        step: "Configuración",
+        desc: "Carga tus categorías y activos iniciales.",
+      },
+      {
+        step: "Gestión",
+        desc: "Asigna responsables y ubicaciones en tiempo real.",
+      },
+    ],
+  },
+  {
+    id: "themenu",
+    title: "TheMenu",
+    image: "/projects/themenu/themenu.webp/",
+    tagline: "La evolución digital de tu restaurante.",
+    description:
+      "Mucho más que un QR. Una suite integral para optimizar ventas, gestionar pedidos y fidelizar clientes de forma automatizada.",
+    status: "proximamente",
+    price: "50.000",
+    customPrice: "300.000",
+    features: [
+      {
+        title: "Carta digital interactiva",
+        description: (
+          <>
+            Actualiza precios y disponibilidad en tiempo real. Elimina costos de
+            impresión y ofrece una{" "}
+            <Highlighted>experiencia visual atractiva</Highlighted> que impulsa
+            el deseo de compra.
+          </>
+        ),
+      },
+      {
+        title: "Gestión de reservas y pedidos",
+        description: (
+          <>
+            Centraliza la operatividad de tu salón y cocina en un solo flujo
+            digital, reduciendo errores humanos y{" "}
+            <Highlighted>maximizando la rotación de mesas</Highlighted>.
+          </>
+        ),
+      },
+      {
+        title: "Estrategias de marketing inteligente",
+        description: (
+          <>
+            Destaca platos del día o sugerencias del chef mediante algoritmos
+            visuales diseñados para{" "}
+            <Highlighted>elevar el ticket promedio</Highlighted> de cada
+            comensal.
+          </>
+        ),
+      },
+      {
+        title: "Analítica de preferencias",
+        description: (
+          <>
+            Accede a reportes detallados sobre el comportamiento de tus
+            clientes. Identifica tendencias y toma{" "}
+            <Highlighted>decisiones basadas en datos</Highlighted> para tu menú.
+          </>
+        ),
+      },
+    ],
+    videoPlaceholder: "/projects/themenu/themenu-presentacion.mp4",
+    documentation: [],
   },
 ];
