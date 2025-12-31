@@ -15,8 +15,8 @@ export const metadata = {
     "En Codeluxe creamos sitios web y aplicaciones modernas, rápidas y seguras para negocios y emprendedores. Desarrollo a medida con tecnologías actuales.",
   icons: {
     icon: [
-      { url: "/favicon.png", type: "image/png", sizes: "256x256" },
       { url: "/favicon.ico" },
+      { url: "/favicon.png", type: "image/png", sizes: "256x256" },
     ],
     apple: "/apple-icon.png",
   },
