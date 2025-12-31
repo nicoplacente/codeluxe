@@ -60,12 +60,12 @@ export default async function ProjectDetail({ params }) {
 
           <div className="md:col-span-3 text-secondary-txt leading-relaxed space-y-4">
             <p className="text-center">{project.description}</p>
-            {project.id === "gestion-inventario" && (
+            {project.id === "gestion-inventarios" && (
               <p className="font-medium text-pretty text-primary-txt border-l-4 border-primary pl-4 bg-primary/5 py-2">
                 Dato clave: Sistema actualmente validado y operativo en más de{" "}
-                <span className="text-primary font-medium">
+                <Highlighted color="text-primary">
                   20 cuarteles de Bomberos en Argentina.
-                </span>
+                </Highlighted>
               </p>
             )}
           </div>
@@ -115,7 +115,7 @@ export default async function ProjectDetail({ params }) {
               preload="none"
               poster={project.image}
             >
-              <source src={project.videoPlaceholder} type="video/mp4" />
+              <source src={project.videoPlaceholder} type="video/webm" />
             </video>
           </section>
 
@@ -189,7 +189,7 @@ export default async function ProjectDetail({ params }) {
                 href="https://wa.me/5492926402409"
                 target="_blank"
                 aria-label="Contactar por Whatsapp para adquirir el servicio"
-                className="bg-primary/10 hover:bg-primary/20 text-primary border border-primary/30 px-8 py-3 rounded-lg font-bold transition-colors flex items-center gap-3"
+                className="bg-primary/10 hover:bg-primary/20 text-primary border justify-center border-primary/30 px-8 py-3 rounded-lg font-bold transition-colors flex items-center gap-3"
               >
                 Adquirir Servicio
               </Link>

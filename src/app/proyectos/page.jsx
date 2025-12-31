@@ -137,7 +137,7 @@ export default function ProyectosPage() {
                   ))}
                 </ul>
 
-                <div className="flex flex-col sm:flex-row justify-between items-end gap-4">
+                <div className="flex flex-col sm:flex-row justify-between items-center gap-4">
                   <div>
                     <TechLabel>Modelo Suscripción</TechLabel>
                     <div className="flex items-baseline gap-1">
@@ -151,7 +151,7 @@ export default function ProyectosPage() {
                   {project.status === "active" ? (
                     <Link
                       href={`/proyectos/${project.id}`}
-                      className="bg-primary/10 hover:bg-primary/20 text-primary border border-primary/30 px-8 py-3 rounded-lg font-bold transition-all flex items-center gap-3 group/btn"
+                      className="bg-primary/10 hover:bg-primary/20 w-full sm:w-fit text-center text-primary border border-primary/30 px-8 py-3 rounded-lg font-bold transition-all flex justify-center items-center gap-3 group/btn"
                     >
                       Acceder al Sistema
                       <span className="group-hover/btn:translate-x-1 transition-transform">
@@ -161,7 +161,7 @@ export default function ProyectosPage() {
                   ) : (
                     <button
                       disabled
-                      className="bg-secondary/20 text-secondary-txt px-8 py-3 rounded-lg  text-sm cursor-not-allowed border border-white/5"
+                      className="bg-secondary/20 text-secondary-txt px-8 py-3 rounded-lg w-full sm:w-fit text-sm cursor-not-allowed border border-white/5"
                     >
                       Proximamente...
                     </button>

@@ -346,7 +346,7 @@ export const projects = [
       },
     ],
     videoPlaceholder:
-      "/projects/gestion-inventario/gestion-inventario-presentacion.mp4",
+      "/projects/gestion-inventario/gestion-inventario-presentacion.webm",
     documentation: [
       {
         step: "Configuración",
@@ -412,7 +412,7 @@ export const projects = [
         ),
       },
     ],
-    videoPlaceholder: "/projects/themenu/themenu-presentacion.mp4",
+    videoPlaceholder: "/projects/themenu/themenu-presentacion.webm",
     documentation: [],
   },
 ];
