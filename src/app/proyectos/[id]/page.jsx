@@ -109,7 +109,7 @@ export default async function ProjectDetail({ params }) {
 
           <section className="aspect-video rounded-3xl bg-secondary overflow-hidden border border-white/5 shadow-2xl">
             <video
-              className="w-full h-full"
+              className="w-full h-full object-cover"
               title={`Video de ${project.title}`}
               controls
               preload="none"
@@ -176,7 +176,7 @@ export default async function ProjectDetail({ params }) {
               </li>
             </ul>
 
-            <div className="space-y-6 pt-10 border-t border-white/10">
+            <div className="space-y-4 pt-10 border-t border-white/10">
               <div className="text-xs text-secondary-txt/60 leading-relaxed uppercase tracking-tighter">
                 ¿Necesitas funcionalidades exclusivas?
                 <p className="mt-1 text-white/90 normal-case text-sm">
@@ -186,12 +186,31 @@ export default async function ProjectDetail({ params }) {
                 </p>
               </div>
               <Link
-                href="https://wa.me/5492926402409"
+                href={`https://wa.me/5492926402409?text=${encodeURIComponent(
+                  `Hola! Quisiera adquirir el sistema de "${project.title}".`
+                )}`}
                 target="_blank"
                 aria-label="Contactar por Whatsapp para adquirir el servicio"
                 className="bg-primary/10 hover:bg-primary/20 text-primary border justify-center border-primary/30 px-8 py-3 rounded-lg font-bold transition-colors flex items-center gap-3"
               >
-                Adquirir Servicio
+                Mercado Pago
+              </Link>
+              <div className="flex items-center w-full">
+                <div className="flex-1 border-t border-white/20"></div>
+                <span className="px-4 text-white text-sm uppercase font-medium">
+                  o
+                </span>
+                <div className="flex-1 border-t border-white/20"></div>
+              </div>
+              <Link
+                href={`https://wa.me/5492926402409?text=${encodeURIComponent(
+                  `Hola! Quisiera adquirir el sistema de "${project.title}".`
+                )}`}
+                target="_blank"
+                aria-label="Contactar por Whatsapp para adquirir el servicio"
+                className="bg-primary/10 hover:bg-primary/20 text-primary border justify-center border-primary/30 px-8 py-3 rounded-lg font-bold transition-colors flex items-center gap-3"
+              >
+                Consulta
               </Link>
             </div>
           </div>
