@@ -15,7 +15,7 @@ export function generateMetadata() {
     openGraph: {
       title: "Sobre Nosotros | Codeluxe",
       description: "Conoce más sobre Codeluxe, nuestro equipo y misión.",
-      images: ["https://codeluxe.tech/logo-codeluxe-metadata.png"],
+      images: ["https://codeluxe.tech/og-image.png"],
     },
     twitter: {
       title: "Sobre Nosotros | Codeluxe",

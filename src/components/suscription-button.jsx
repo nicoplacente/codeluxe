@@ -1,5 +1,7 @@
 "use client";
 
+import { toast } from "sonner";
+
 export default function SubscriptionButton({ project }) {
   const handleSubscribe = async () => {
     const newWindow = window.open("", "_blank");
@@ -20,11 +22,11 @@ export default function SubscriptionButton({ project }) {
         newWindow.location.href = data.init_point;
       } else {
         newWindow.close();
-        alert("Error al generar el link.");
+        toast.error("Error al generar el link.");
       }
     } catch (err) {
       newWindow.close();
-      alert("Hubo un error al procesar el pago");
+      toast.error("Hubo un error al procesar el pago");
     }
   };
 

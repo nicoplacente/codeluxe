@@ -14,7 +14,7 @@ export function generateMetadata() {
       title: "Nuestros Proyectos | Codeluxe",
       description:
         "En Codeluxe no solo creamos aplicaciónes webs personalizadas para terceros. También desarrollamos tecnología de alto impacto bajo un modelo de suscripción diseñado para eliminar la fricción técnica, potenciar la escalabilidad de tu negocio y facilitarte el día a día.",
-      images: ["https://codeluxe.tech/logo-codeluxe-metadata.png"],
+      images: ["https://codeluxe.tech/og-image.png"],
     },
     twitter: {
       title: "Nuestros Proyectos | Codeluxe",

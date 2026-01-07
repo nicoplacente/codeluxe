@@ -14,11 +14,11 @@ export const metadata = {
   description:
     "En Codeluxe creamos sitios web y aplicaciones modernas, rápidas y seguras para negocios y emprendedores. Desarrollo a medida con tecnologías actuales.",
   icons: {
-    icon: [
-      { url: "/favicon.ico" },
-      { url: "/favicon.png", type: "image/png", sizes: "256x256" },
-    ],
-    apple: "/apple-icon.png",
+    apple: {
+      url: "/apple-touch-icon.png",
+      sizes: "180x180",
+      type: "image/png",
+    },
   },
   keywords: [
     "desarrollo web",
@@ -53,9 +53,9 @@ export const metadata = {
     type: "website",
     images: [
       {
-        url: "https://codeluxe.tech/logo-codeluxe-metadata.png",
-        width: 256,
-        height: 256,
+        url: "https://codeluxe.tech/og-image.png",
+        width: 1200,
+        height: 630,
         alt: "Codeluxe - Desarrollo Web",
       },
     ],
@@ -66,17 +66,12 @@ export const metadata = {
     title: "Codeluxe",
     description:
       "Codeluxe crea sitios web y aplicaciones modernas, rápidas y seguras para negocios y emprendedores. Desarrollo a medida con tecnologías actuales.",
-    images: ["https://codeluxe.tech/logo-codeluxe-metadata.png"],
+    images: ["https://codeluxe.tech/og-image.png"],
   },
 
   authors: [{ name: "Codeluxe", url: "https://codeluxe.tech" }],
   creator: "Codeluxe",
 
-  robots: {
-    index: true,
-    follow: true,
-    nocache: false,
-  },
   category: "technology",
 };
 

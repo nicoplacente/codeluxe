@@ -24,7 +24,7 @@ export async function generateMetadata({ params }) {
     openGraph: {
       title: `${project.title} | Codeluxe`,
       description: project.description,
-      images: ["https://codeluxe.tech/logo-codeluxe-metadata.png"],
+      images: ["https://codeluxe.tech/og-image.png"],
     },
     twitter: {
       title: `${project.title} | Codeluxe`,
