@@ -1,4 +1,5 @@
 import Highlighted from "@/components/highlighted";
+import SubscriptionButton from "@/components/suscription-button";
 import { projects } from "@/utils/constants";
 import Link from "next/link";
 
@@ -185,16 +186,7 @@ export default async function ProjectDetail({ params }) {
                   mensual.
                 </p>
               </div>
-              <Link
-                href={`https://wa.me/5492926402409?text=${encodeURIComponent(
-                  `Hola! Quisiera adquirir el sistema de "${project.title}".`
-                )}`}
-                target="_blank"
-                aria-label="Contactar por Whatsapp para adquirir el servicio"
-                className="bg-primary/10 hover:bg-primary/20 text-primary border justify-center border-primary/30 px-8 py-3 rounded-lg font-bold transition-colors flex items-center gap-3"
-              >
-                Mercado Pago
-              </Link>
+              <SubscriptionButton project={project} />
               <div className="flex items-center w-full">
                 <div className="flex-1 border-t border-white/20"></div>
                 <span className="px-4 text-white text-sm uppercase font-medium">
