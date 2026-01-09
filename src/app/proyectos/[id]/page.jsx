@@ -19,15 +19,7 @@ export async function generateMetadata({ params }) {
     title: `${project.title} | Codeluxe`,
     description: project.description,
     alternates: {
-      canonical: `/proyectos/${project.id}`,
-    },
-    openGraph: {
-      title: `${project.title} | Codeluxe`,
-      description: project.description,
-    },
-    twitter: {
-      title: `${project.title} | Codeluxe`,
-      description: project.description,
+      canonical: `/proyectos/${project.id}/`,
     },
   };
 }

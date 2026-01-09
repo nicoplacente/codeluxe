@@ -37,21 +37,15 @@ export const metadata = {
     canonical: "/",
   },
   openGraph: {
-    title: "Codeluxe",
-    description:
-      "Codeluxe crea sitios web y aplicaciones modernas, rápidas y seguras para negocios y emprendedores. Desarrollo a medida con tecnologías actuales.",
-    url: "https://codeluxe.tech",
+    url: "https://codeluxe.tech/",
     siteName: "Codeluxe",
     locale: "es_AR",
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Codeluxe",
-    description:
-      "Codeluxe crea sitios web y aplicaciones modernas, rápidas y seguras para negocios y emprendedores. Desarrollo a medida con tecnologías actuales.",
   },
-  authors: [{ name: "Codeluxe", url: "https://codeluxe.tech" }],
+  authors: [{ name: "Codeluxe", url: "https://codeluxe.tech/" }],
   creator: "Codeluxe",
   category: "technology",
 };

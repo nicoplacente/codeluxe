@@ -5,15 +5,7 @@ export function generateMetadata() {
     title: "Términos y Condiciones | Codeluxe",
     description: "Términos y condiciones de servicio de Codeluxe.",
     alternates: {
-      canonical: "/terminos",
-    },
-    openGraph: {
-      title: "Términos y Condiciones | Codeluxe",
-      description: "Términos y condiciones de servicio de Codeluxe.",
-    },
-    twitter: {
-      title: "Términos y Condiciones | Codeluxe",
-      description: "Términos y condiciones de servicio de Codeluxe.",
+      canonical: "/terminos/",
     },
   };
 }

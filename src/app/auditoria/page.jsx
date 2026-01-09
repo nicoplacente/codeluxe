@@ -9,17 +9,7 @@ export function generateMetadata() {
     description:
       "Solicita una auditoría web gratuita y descubre los problemas de tu sitio web y cómo solucionarlos.",
     alternates: {
-      canonical: "/auditoria",
-    },
-    openGraph: {
-      title: "Auditoría Web | Codeluxe",
-      description:
-        "Solicita una auditoría web gratuita y descubre los problemas de tu sitio web y cómo solucionarlos.",
-    },
-    twitter: {
-      title: "Auditoría Web | Codeluxe",
-      description:
-        "Solicita una auditoría web gratuita y descubre los problemas de tu sitio web y cómo solucionarlos.",
+      canonical: "/auditoria/",
     },
   };
 }
