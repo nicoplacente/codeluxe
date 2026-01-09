@@ -8,17 +8,10 @@ export function generateMetadata() {
     description:
       "Envia tu propuesta para contratar nuestros servicios y obtener tu aplicación web a medida.",
     alternates: {
-      canonical: "/propuesta",
+      canonical: "/propuesta/",
     },
     openGraph: {
-      title: "Propuesta | Codeluxe",
-      description:
-        "Envia tu propuesta para contratar nuestros servicios y obtener tu aplicación web a medida.",
-    },
-    twitter: {
-      title: "Propuesta | Codeluxe",
-      description:
-        "Envia tu propuesta para contratar nuestros servicios y obtener tu aplicación web a medida.",
+      url: "https://codeluxe.tech/propuesta/",
     },
   };
 }
