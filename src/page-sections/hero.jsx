@@ -8,9 +8,10 @@ export default function Hero() {
         width={300}
         height={300}
         alt="Logo Codeluxe"
-        className="rounded-xl [box-shadow:0_0_100px_#1e2e39]"
+        className="rounded-full logo-hero-filter"
         fetchPriority="high"
-        loading="eager"
+        priority={true}
+        // loading="eager"
       />
       <div className="flex flex-col gap-6">
         <blockquote className="pl-6 border-l-4 border-primary text-balance text-white/90 italic text-2xl md:text-4xl font-light">

@@ -141,6 +141,15 @@ nav {
   }
 }
 
+/* Logo Hero Filter */
+
+.logo-hero-filter {
+  filter: drop-shadow(0 0 100px #1e2e39);
+
+  will-change: filter;
+  transform: translateZ(0);
+}
+
 /* Arrow animation */
 
 .arrow-trail {
