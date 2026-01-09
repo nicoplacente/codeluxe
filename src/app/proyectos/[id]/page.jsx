@@ -21,6 +21,9 @@ export async function generateMetadata({ params }) {
     alternates: {
       canonical: `/proyectos/${project.id}/`,
     },
+    openGraph: {
+      url: `https://codeluxe.tech/proyectos/${project.id}/`,
+    },
   };
 }
 

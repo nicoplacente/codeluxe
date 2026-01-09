@@ -10,6 +10,9 @@ export function generateMetadata() {
     alternates: {
       canonical: "/proyectos/",
     },
+    openGraph: {
+      url: "https://codeluxe.tech/proyectos/",
+    },
   };
 }
 

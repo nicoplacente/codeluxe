@@ -11,6 +11,9 @@ export function generateMetadata() {
     alternates: {
       canonical: "/auditoria/",
     },
+    openGraph: {
+      url: "https://codeluxe.tech/auditoria/",
+    },
   };
 }
 

@@ -12,14 +12,9 @@ export function generateMetadata() {
     alternates: {
       canonical: "/info/",
     },
-    // openGraph: {
-    //   title: "Sobre Nosotros | Codeluxe",
-    //   description: "Conoce más sobre Codeluxe, nuestro equipo y misión.",
-    // },
-    // twitter: {
-    //   title: "Sobre Nosotros | Codeluxe",
-    //   description: "Conoce más sobre Codeluxe, nuestro equipo y misión.",
-    // },
+    openGraph: {
+      url: "https://codeluxe.tech/info/",
+    },
   };
 }
 

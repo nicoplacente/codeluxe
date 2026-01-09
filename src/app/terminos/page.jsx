@@ -7,6 +7,9 @@ export function generateMetadata() {
     alternates: {
       canonical: "/terminos/",
     },
+    openGraph: {
+      url: "https://codeluxe.tech/terminos/",
+    },
   };
 }
 
