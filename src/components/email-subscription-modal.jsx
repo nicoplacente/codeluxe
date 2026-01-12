@@ -17,7 +17,7 @@ export default function EmailSubscriptionModal({
     <div className="fixed inset-0 z-50 flex h-full items-center justify-center bg-black/70 backdrop-blur-sm p-4">
       <div className="bg-background border border-primary/20 rounded-3xl p-8 w-full max-w-md shadow-2xl space-y-6">
         <div className="space-y-2">
-          <h3 className="text-2xl font-black text-primary-txt">
+          <h3 className="text-2xl font-semibold text-primary-txt">
             Finalizar suscripción
           </h3>
           <p className="text-secondary-txt text-sm">
@@ -26,12 +26,13 @@ export default function EmailSubscriptionModal({
         </div>
 
         <div className="space-y-2">
-          <label className="text-[10px] uppercase tracking-widest text-primary font-bold">
+          <label className="text-[10px] uppercase tracking-widest text-primary">
             Email de contacto
           </label>
           <input
+            autoComplete="email"
             type="email"
-            placeholder="tu@email.com"
+            placeholder="correo@ejemplo.com"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
             className="w-full bg-secondary border border-primary/10 rounded-xl px-4 py-3 text-primary-txt outline-none focus:border-primary transition-all"
@@ -50,7 +51,7 @@ export default function EmailSubscriptionModal({
           <button
             onClick={() => onConfirm(email)}
             disabled={loading || !email.includes("@")}
-            className="flex-1 bg-primary/20 hover:bg-primary/40 text-primary font-bold rounded-xl py-3 transition disabled:opacity-50 cursor-pointer border border-primary/20 "
+            className="flex-1 bg-primary/20 hover:bg-primary/40 text-primary rounded-xl py-3 transition disabled:opacity-50 cursor-pointer border border-primary/20 "
           >
             {loading ? "Procesando..." : "Continuar al pago"}
           </button>
