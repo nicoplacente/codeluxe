@@ -5,11 +5,11 @@ export default function sitemap() {
 
   const staticRoutes = [
     "",
-    "/auditoria",
-    "/propuesta",
-    "/proyectos",
-    "/terminos",
-    "/info",
+    "/auditoria/",
+    "/propuesta/",
+    "/proyectos/",
+    "/terminos/",
+    "/info/",
   ].map((route) => ({
     url: `${baseUrl}${route}`,
     lastModified: new Date().toISOString(),
@@ -18,7 +18,7 @@ export default function sitemap() {
   }));
 
   const productRoutes = projects.map((project) => ({
-    url: `${baseUrl}/productos/${project.id}`,
+    url: `${baseUrl}/productos/${project.id}/`,
     lastModified: new Date().toISOString(),
     changeFrequency: "weekly",
     priority: 0.6,
