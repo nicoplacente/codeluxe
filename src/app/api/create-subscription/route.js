@@ -1,12 +1,10 @@
 import { MercadoPagoConfig, PreApproval } from "mercadopago";
-
 const client = new MercadoPagoConfig({
   accessToken: process.env.MP_ACCESS_TOKEN,
 });
 
 export async function POST(request) {
   const { projectTitle, price, email } = await request.json();
-
   const preApproval = new PreApproval(client);
 
   try {
@@ -20,17 +18,17 @@ export async function POST(request) {
           currency_id: "ARS",
         },
         back_url: process.env.APP_URL + "/register",
-        payer_email: email,
+        payer_email: email, // En producción usamos el email real del cliente
+        external_reference: email, // Respaldo de seguridad
         status: "pending",
       },
     });
 
-    // Retornamos el init_point que es la URL de Mercado Pago
     return Response.json({ init_point: subscription.init_point });
   } catch (error) {
-    console.error(error);
+    console.error("Error al crear suscripción:", error);
     return Response.json(
-      { error: "Error al crear la suscripción" },
+      { error: "Error al procesar el pago" },
       { status: 500 }
     );
   }
