@@ -4,7 +4,7 @@ export default function sitemap() {
   const baseUrl = "https://codeluxe.tech";
 
   const staticRoutes = [
-    "",
+    "/",
     "/auditoria/",
     "/propuesta/",
     "/proyectos/",
