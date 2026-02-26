@@ -27,16 +27,15 @@ export default function Header() {
       <nav className="flex mx-auto justify-between px-4 lg:px-0 py-2 items-center text-primary-txt relative">
         <Link href="/" aria-label="Inicio">
           <Image
-            src="/logo-codeluxe.webp"
+            src="/logo-cd-header.webp"
             alt="Logo Codeluxe"
-            className="size-12 object-cover min-w-12 rounded-full active:scale-90 hover:contrast-50 transition cursor-pointer hover:[box-shadow:0_0_50px_#83cee555]"
+            className="size-12 object-cover min-w-12 rounded-full active:scale-90 hover:saturate-200 transition-all duration-300 cursor-pointer hover:[filter:drop-shadow(0_0_50px_#83cee555)]"
             fetchPriority="high"
             width={48}
             height={48}
             loading="eager"
           />
         </Link>
-
         <div id="nav-button">
           <NavButton
             isOpen={isOpen}

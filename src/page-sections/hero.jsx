@@ -4,7 +4,7 @@ export default function Hero() {
   return (
     <main className="flex items-center gap-20 flex-col sm:flex-row animate-min-height">
       <Image
-        src="/logo-codeluxe.webp"
+        src="/logo-cd-3d.webp"
         width={300}
         height={300}
         alt="Logo Codeluxe"

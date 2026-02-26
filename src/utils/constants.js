@@ -127,9 +127,9 @@ export const navOptions = [
     icon: IconInfoCircle,
   },
   {
-    title: "Reservar Reunión",
-    href: "/#consultas",
-    icon: IconBrandZoom,
+    title: "Precios",
+    href: "/precios",
+    icon: IconCurrencyDollar,
   },
   {
     title: "Auditoria",
