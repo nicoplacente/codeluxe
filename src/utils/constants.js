@@ -23,6 +23,7 @@ import {
   IconReportSearch,
   IconBrandZoom,
   IconBrandTiktok,
+  IconBriefcase,
 } from "@tabler/icons-react";
 import Link from "next/link";
 
@@ -139,7 +140,7 @@ export const navOptions = [
   {
     title: "Nuestros Proyectos",
     href: "/proyectos",
-    icon: IconCurrencyDollar,
+    icon: IconBriefcase,
   },
   {
     title: "Preguntas frecuentes",
@@ -224,7 +225,7 @@ export const FAQs = [
           o contactarnos directamente por{" "}
           <Link
             href={`https://wa.me/5492926402409?text=${encodeURIComponent(
-              "Hola! Quiero contratar tu servicio."
+              "Hola! Quiero contratar tu servicio.",
             )}`}
             className="font-semibol text-primary hover:underline"
             aria-label="Contactar por Whatsapp"

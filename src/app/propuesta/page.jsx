@@ -1,6 +1,7 @@
 import Title from "@/ui/title";
 import FormPreview from "@/page-sections/form-preview";
 import Link from "next/link";
+import SectionContainer from "@/components/section-container";
 
 export function generateMetadata() {
   return {
@@ -18,7 +19,7 @@ export function generateMetadata() {
 
 export default function Propuesta() {
   return (
-    <main className="flex flex-col gap-4 max-w-4xl sm:my-12 mx-auto">
+    <SectionContainer className="max-w-5xl sm:my-12 mx-auto">
       <div className="flex flex-col gap-2">
         <Title>Envía tu propuesta</Title>
         <h2 className="!text-secondary-txt text-pretty text-base">
@@ -26,7 +27,7 @@ export default function Propuesta() {
           desea o contactarnos directamente por{" "}
           <Link
             href={`https://wa.me/5492926402409?text=${encodeURIComponent(
-              "Hola! Quiero contratar tu servicio."
+              "Hola! Quiero contratar tu servicio.",
             )}`}
             className="font-semibol text-primary hover:underline"
             aria-label="Contactar por Whatsapp"
@@ -38,6 +39,6 @@ export default function Propuesta() {
         </h2>
       </div>
       <FormPreview />
-    </main>
+    </SectionContainer>
   );
 }

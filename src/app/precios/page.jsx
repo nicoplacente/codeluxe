@@ -35,7 +35,12 @@ const mainServices = [
       "Ideal para lanzar una campaña, presentar un servicio o captar leads de forma clara y efectiva.",
     price: "$300.000",
     priceNote: "Pago único",
-    details: ["Presencia online profesional", "Diseño optimizado para conversión", "Carga rápida", "Adaptación a móviles"],
+    details: [
+      "Presencia online profesional",
+      "Diseño optimizado para conversión",
+      "Carga rápida",
+      "Adaptación a móviles",
+    ],
     cta: "Solicitar este servicio",
     pricingType: "fixed",
     includesDomain: false,
@@ -47,7 +52,12 @@ const mainServices = [
       "Sitio institucional pensado para mostrar quién sos, qué hacés y por qué elegirte.",
     price: "Desde $500.000",
     priceNote: "+ $80.000/mes",
-    details: ["Imagen sólida para tu empresa", "Secciones autoadministrables", "Escalable a futuro", "Soporte técnico"],
+    details: [
+      "Imagen sólida para tu empresa",
+      "Secciones autoadministrables",
+      "Escalable a futuro",
+      "Soporte técnico",
+    ],
     cta: "Solicitar este servicio",
     pricingType: "from",
     includesDomain: true,
@@ -59,7 +69,12 @@ const mainServices = [
       "Aplicaciones accesibles desde cualquier dispositivo para acompañar el crecimiento de tu negocio.",
     price: "Desde $1.200.000",
     priceNote: "+ $120.000/mes",
-    details: ["Automatización de procesos", "Acceso desde cualquier lugar", "Escalable", "Seguridad y backups"],
+    details: [
+      "Automatización de procesos",
+      "Acceso desde cualquier lugar",
+      "Escalable",
+      "Seguridad y backups",
+    ],
     cta: "Solicitar este servicio",
     pricingType: "from",
     includesDomain: true,
@@ -71,7 +86,12 @@ const mainServices = [
       "Soluciones a medida para administrar ventas, stock, clientes y operaciones en un solo lugar.",
     price: "Desde $3.000.000",
     priceNote: "+ $120.000/mes",
-    details: ["Control total de tu negocio", "Ahorro de tiempo operativo", "Datos centralizados", "Adaptado a tu flujo de trabajo"],
+    details: [
+      "Control total de tu negocio",
+      "Ahorro de tiempo operativo",
+      "Datos centralizados",
+      "Adaptado a tu flujo de trabajo",
+    ],
     cta: "Solicitar este servicio",
     pricingType: "from",
     includesDomain: true,
@@ -83,7 +103,12 @@ const mainServices = [
       "Ecommerce profesional para vender tus productos de forma segura y escalable.",
     price: "Desde $1.500.000",
     priceNote: "+ $100.000/mes",
-    details: ["Ventas 24/7", "Integración con pagos", "Gestión de productos", "Reportes de ventas"],
+    details: [
+      "Ventas 24/7",
+      "Integración con pagos",
+      "Gestión de productos",
+      "Reportes de ventas",
+    ],
     cta: "Solicitar este servicio",
     pricingType: "from",
     includesDomain: true,
@@ -95,7 +120,12 @@ const mainServices = [
       "Mostrá tu trabajo de forma clara, moderna y lista para compartir.",
     price: "$300.000",
     priceNote: "Pago único",
-    details: ["Marca personal profesional", "Ideal para freelancers", "Diseño moderno", "Optimizado para compartir"],
+    details: [
+      "Marca personal profesional",
+      "Ideal para freelancers",
+      "Diseño moderno",
+      "Optimizado para compartir",
+    ],
     cta: "Solicitar este servicio",
     pricingType: "fixed",
     includesDomain: false,
@@ -121,9 +151,10 @@ export default function PreciosPage() {
         <div className="flex flex-col gap-4">
           <Title>Precios claros, resultados reales</Title>
           <Paragraph className="text-sm sm:text-base">
-            Diseñamos y desarrollamos soluciones digitales pensadas para que tu proyecto crezca
-            de forma sostenible. Estos precios son una guía para que puedas entender las
-            inversiones típicas según el tipo de servicio que necesitás.
+            Diseñamos y desarrollamos soluciones digitales pensadas para que tu
+            proyecto crezca de forma sostenible. Estos precios son una guía para
+            que puedas entender las inversiones típicas según el tipo de
+            servicio que necesitás.
           </Paragraph>
 
           <div className="rounded-xl italic border border-warning bg-glass-warning/80 px-4 py-3 text-xs sm:text-sm flex flex-col gap-2">
@@ -131,8 +162,8 @@ export default function PreciosPage() {
               Importante sobre los precios publicados
             </p>
             <Paragraph className="text-xs sm:text-sm">
-              Los precios mostrados son valores base y pueden variar según la complejidad del
-              proyecto. Te recomendamos leer nuestros{" "}
+              Los precios mostrados son valores base y pueden variar según la
+              complejidad del proyecto. Te recomendamos leer nuestros{" "}
               <Link
                 href="/terminos"
                 className="font-semibold text-primary hover:underline"
@@ -152,8 +183,8 @@ export default function PreciosPage() {
       >
         <SubTitle className="text-2xl">Servicios principales</SubTitle>
         <Paragraph className="text-sm">
-          Cada servicio está pensado para resolver una necesidad concreta de tu negocio,
-          con foco en resultados y en el acompañamiento a largo plazo.
+          Cada servicio está pensado para resolver una necesidad concreta de tu
+          negocio, con foco en resultados y en el acompañamiento a largo plazo.
         </Paragraph>
 
         <ul className="grid grid-cols-1 md:grid-cols-2 gap-5">
@@ -212,13 +243,14 @@ export default function PreciosPage() {
 
                 {service.includesDomain && (
                   <p className="text-[11px] sm:text-xs text-primary-txt/70">
-                    Dominio profesional incluido mientras mantengas el abono mensual activo.
+                    Dominio profesional incluido mientras mantengas el abono
+                    mensual activo.
                   </p>
                 )}
 
                 <CallToAction
                   href={buildWhatsAppUrl(
-                    `Hola, me interesa el servicio "${service.name}" de Codeluxe (${service.price} ${service.priceNote}). ¿Podemos hablar para ver si se adapta a mi proyecto?`
+                    `Hola, me interesa el servicio "${service.name}" de Codeluxe (${service.price} ${service.priceNote}). ¿Podemos hablar para ver si se adapta a mi proyecto?`,
                   )}
                   ariaLabel={`Solicitar servicio por WhatsApp: ${service.name}`}
                   target="_blank"
@@ -232,7 +264,10 @@ export default function PreciosPage() {
         </ul>
       </SectionContainer>
 
-      <SectionContainer id="combo-destacado" className="border-primary/40 bg-secondary/60">
+      <SectionContainer
+        id="combo-destacado"
+        className="border-primary/40 bg-secondary/60"
+      >
         <div className="flex flex-col gap-4">
           <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3">
             <div className="flex flex-col gap-1">
@@ -261,8 +296,9 @@ export default function PreciosPage() {
           </div>
 
           <Paragraph className="text-sm">
-            Ideal para negocios que necesitan presencia digital completa: una landing optimizada
-            para conversión y una estrategia constante en redes sociales para atraer clientes.
+            Ideal para negocios que necesitan presencia digital completa: una
+            landing optimizada para conversión y una estrategia constante en
+            redes sociales para atraer clientes.
           </Paragraph>
 
           <div className="flex flex-col sm:flex-row gap-4">
@@ -296,7 +332,7 @@ export default function PreciosPage() {
 
           <CallToAction
             href={buildWhatsAppUrl(
-              "Hola, me interesa el Combo Landing + Gestión de redes de Codeluxe ($250.000 + $400.000/mes). Quisiera más información y ver si se adapta a mi negocio."
+              "Hola, me interesa el Combo Landing + Gestión de redes de Codeluxe ($250.000 + $400.000/mes). Quisiera más información y ver si se adapta a mi negocio.",
             )}
             ariaLabel="Solicitar combo Landing + Gestión de redes por WhatsApp"
             target="_blank"
@@ -312,8 +348,9 @@ export default function PreciosPage() {
         <div className="flex flex-col gap-4 sm:flex-row sm:items-start sm:justify-between">
           <div className="flex-1 flex flex-col gap-2">
             <Paragraph className="text-sm">
-              Manejamos la presencia de tu marca en redes sociales para que puedas enfocarte
-              en tu negocio. Nos ocupamos de la estrategia, el diseño y la comunicación.
+              Manejamos la presencia de tu marca en redes sociales para que
+              puedas enfocarte en tu negocio. Nos ocupamos de la estrategia, el
+              diseño y la comunicación.
             </Paragraph>
 
             <ul className="space-y-1 text-sm">
@@ -350,7 +387,7 @@ export default function PreciosPage() {
 
             <CallToAction
               href={buildWhatsAppUrl(
-                "Hola, me interesa el servicio de Gestión de redes sociales de Codeluxe ($500.000/mes). Me gustaría que me cuenten cómo trabajan y qué incluye el servicio."
+                "Hola, me interesa el servicio de Gestión de redes sociales de Codeluxe ($500.000/mes). Me gustaría que me cuenten cómo trabajan y qué incluye el servicio.",
               )}
               ariaLabel="Solicitar servicio de gestión de redes sociales por WhatsApp"
               target="_blank"
@@ -366,12 +403,13 @@ export default function PreciosPage() {
         <div className="flex flex-col gap-4 items-start">
           <SubTitle className="text-2xl">¿Necesitás algo a medida?</SubTitle>
           <Paragraph className="text-base">
-            También desarrollamos soluciones personalizadas para proyectos únicos, integraciones
-            especiales o sistemas internos pensados exclusivamente para tu negocio.
+            También desarrollamos soluciones personalizadas para proyectos
+            únicos, integraciones especiales o sistemas internos pensados
+            exclusivamente para tu negocio.
           </Paragraph>
           <CallToAction
             href={buildWhatsAppUrl(
-              "Hola, necesito una solución a medida para mi proyecto y me gustaría solicitar un presupuesto personalizado."
+              "Hola, necesito una solución a medida para mi proyecto y me gustaría solicitar un presupuesto personalizado.",
             )}
             ariaLabel="Solicitar presupuesto a medida por WhatsApp"
             target="_blank"
@@ -384,4 +422,3 @@ export default function PreciosPage() {
     </main>
   );
 }
-

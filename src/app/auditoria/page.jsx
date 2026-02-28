@@ -19,7 +19,7 @@ export function generateMetadata() {
 
 export default function AuditPage() {
   return (
-    <SectionContainer className="max-w-4xl sm:my-12 mx-auto">
+    <SectionContainer className="max-w-5xl sm:my-12 mx-auto">
       <Title>Solicita tu Auditoría Web Gratuita</Title>
 
       <Paragraph className="text-base">
