@@ -21,7 +21,6 @@ import {
   IconZoomQuestion,
   IconCurrencyDollar,
   IconReportSearch,
-  IconBrandZoom,
   IconBrandTiktok,
   IconBriefcase,
 } from "@tabler/icons-react";
@@ -417,3 +416,45 @@ export const projects = [
     documentation: [],
   },
 ];
+
+export const TEAM = {
+  devs: [
+    {
+      nombre: "Amparo Cardoso Bosch",
+      imagen: "/equipo/amparo.webp",
+      linkedin: "https://www.linkedin.com/in/amparo-cardoso-bosch/",
+    },
+    {
+      nombre: "M Verónica Rebolleda",
+      imagen: "/equipo/vero.webp",
+      linkedin: "https://www.linkedin.com/in/m-veronica-rebolleda/",
+    },
+    {
+      nombre: "Basilio Alvarez",
+      imagen: "/equipo/basilio.webp",
+      linkedin: "https://www.linkedin.com/in/basilioalvarez/",
+    },
+  ],
+
+  marketing: [
+    {
+      nombre: "Franco Colavita",
+      imagen: "/equipo/franco.webp",
+      linkedin: "https://www.linkedin.com/in/franco-colavita-354490208/",
+    },
+    {
+      nombre: "Sofía Fernández Catalini",
+      imagen: "/equipo/sofi.webp",
+      linkedin:
+        "https://www.linkedin.com/in/sof%C3%ADa-fern%C3%A1ndez-catalini-22a1a9281/",
+    },
+  ],
+
+  designers: [
+    {
+      nombre: "Rodrigo Ariel García",
+      imagen: "/equipo/rodri.webp",
+      linkedin: "https://www.linkedin.com/in/rodrigo-garcia-90a94a293/",
+    },
+  ],
+};

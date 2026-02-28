@@ -2,9 +2,10 @@ import SectionContainer from "@/components/section-container";
 import CallToAction from "@/components/call-to-action";
 import Paragraph from "@/ui/paragraph";
 import Title from "@/ui/title";
-import PortfolioButtons from "@/ui/portfolio-button";
 import Highlighted from "@/components/highlighted";
-import Link from "next/link";
+import FounderCard from "@/components/team-cards/founder-card";
+import TeamSection from "@/components/team-cards/team-section";
+import { TEAM } from "@/utils/constants";
 
 export function generateMetadata() {
   return {
@@ -18,46 +19,6 @@ export function generateMetadata() {
     },
   };
 }
-
-// Datos del equipo
-const programadores = [
-  {
-    nombre: "Martín González",
-    imagen: "/placeholder-programmer-1.webp",
-    linkedin: "https://linkedin.com/in/martingonzalez",
-  },
-  {
-    nombre: "Sofía Rodríguez",
-    imagen: "/placeholder-programmer-2.webp",
-    linkedin: "https://linkedin.com/in/sofiarodriguez",
-  },
-  {
-    nombre: "Lucas Fernández",
-    imagen: "/placeholder-programmer-3.webp",
-    linkedin: "https://linkedin.com/in/lucasfernandez",
-  },
-];
-
-const marketing = [
-  {
-    nombre: "Ana Martínez",
-    imagen: "/placeholder-marketing-1.webp",
-    linkedin: "https://linkedin.com/in/anamartinez",
-  },
-  {
-    nombre: "Diego Pérez",
-    imagen: "/placeholder-marketing-2.webp",
-    linkedin: "https://linkedin.com/in/diegoperez",
-  },
-];
-
-const disenadores = [
-  {
-    nombre: "Valentina López",
-    imagen: "/placeholder-designer-1.webp",
-    linkedin: "https://linkedin.com/in/valentinalopez",
-  },
-];
 
 export default function Info() {
   return (
@@ -228,294 +189,51 @@ export default function Info() {
             Fundadores
           </h4>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-            <article className="relative bg-gray-800 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden border border-gray-700">
-              <div className="absolute top-4 right-4 z-10">
-                <span className="bg-gradient-to-r from-primary/50 to-secondary text-white text-xs px-3 py-1.5 rounded-full font-semibold shadow-md">
-                  SEO & Fundador
-                </span>
-              </div>
-              <div className="p-8">
-                <div className="flex flex-col md:flex-row items-center gap-6">
-                  <div className="relative">
-                    <img
-                      className="w-28 h-28 object-cover rounded-full border-4 border-primary/20 shadow-lg"
-                      src="/nicoplacente.webp"
-                      alt="Nicolás Placente"
-                      title="Nicolás Placente"
-                    />
-                    <div className="absolute -bottom-2 -right-2 w-6 h-6 bg-primary rounded-full flex items-center justify-center">
-                      <span className="text-white text-xs font-bold">NP</span>
-                    </div>
-                  </div>
-                  <div className="flex-1 text-center md:text-left">
-                    <h3 className="font-bold text-2xl sm:mt-2 text-white">
-                      Nicolás Placente
-                    </h3>
-                    <p className="text-gray-600 dark:text-gray-300 mb-2 text-sm">
-                      Liderazgo técnico y gestión empresarial
-                    </p>
-                    <div className="flex flex-col sm:flex-row gap-3 justify-center md:justify-start">
-                      <PortfolioButtons
-                        href="https://nicoplacente.codeluxe.tech/"
-                        aria="Portfolio de Nicolás Placente"
-                      >
-                        Ver portfolio
-                      </PortfolioButtons>
-                      <Link
-                        href="https://linkedin.com/in/nicoplacente"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        aria-label="LinkedIn de Nicolás Placente"
-                        className="inline-flex items-center justify-center bg-blue-600 hover:bg-blue-700 text-white px-5 py-2 text-sm rounded-xl transition duration-300 gap-2 shadow-md hover:shadow-lg"
-                      >
-                        <svg
-                          className="w-4 h-4"
-                          fill="currentColor"
-                          viewBox="0 0 24 24"
-                        >
-                          <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
-                        </svg>
-                        LinkedIn
-                      </Link>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </article>
+            <FounderCard
+              nombre="Nicolás Placente"
+              imagen="/nicoplacente.webp"
+              descripcion="Liderazgo técnico y gestión empresarial"
+              portfolioHref="https://nicoplacente.codeluxe.tech/"
+              portfolioAria="Portfolio de Nicolás Placente"
+              linkedinHref="https://linkedin.com/in/nicoplacente"
+              linkedinAria="LinkedIn de Nicolás Placente"
+              badgeText="SEO & Fundador"
+              badgeGradient="from-primary/50 to-secondary"
+              inicialBadgeColor="bg-primary"
+            />
 
-            <article className="relative bg-gray-800 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden border border-gray-700">
-              <div className="absolute top-4 right-4 z-10">
-                <span className="bg-gradient-to-r from-secondary to-primary/50 text-white text-xs px-3 py-1.5 rounded-full font-semibold shadow-md">
-                  Cofundador & Presidente
-                </span>
-              </div>
-              <div className="p-8">
-                <div className="flex flex-col md:flex-row items-center gap-6">
-                  <div className="relative">
-                    <img
-                      className="w-28 h-28 object-cover rounded-full border-4 border-secondary/20 shadow-lg"
-                      src="/tiago.webp"
-                      alt="Tiago Navarro"
-                      title="Tiago Navarro"
-                    />
-                    <div className="absolute -bottom-2 -right-2 w-6 h-6 bg-secondary rounded-full flex items-center justify-center">
-                      <span className="text-white text-xs font-bold">TN</span>
-                    </div>
-                  </div>
-                  <div className="flex-1 text-center md:text-left">
-                    <h3 className="font-bold text-2xl sm:mt-2 text-white">
-                      Tiago Navarro
-                    </h3>
-                    <p className="text-gray-600 dark:text-gray-300 mb-2 text-sm">
-                      Dirección estratégica y administración general
-                    </p>
-                    <div className="flex flex-col sm:flex-row gap-3 justify-center md:justify-start">
-                      <PortfolioButtons
-                        href="https://navarrotiago.codeluxe.tech/"
-                        aria="Portfolio de Tiago Navarro"
-                      >
-                        Ver portfolio
-                      </PortfolioButtons>
-                      <Link
-                        href="https://www.linkedin.com/in/tiago-navarro0/"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        aria-label="LinkedIn de Tiago Navarro"
-                        className="inline-flex items-center justify-center bg-blue-600 hover:bg-blue-700 text-white px-5 py-2 text-sm rounded-xl transition duration-300 gap-2 shadow-md hover:shadow-lg"
-                      >
-                        <svg
-                          className="w-4 h-4"
-                          fill="currentColor"
-                          viewBox="0 0 24 24"
-                        >
-                          <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
-                        </svg>
-                        LinkedIn
-                      </Link>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </article>
+            <FounderCard
+              nombre="Tiago Navarro"
+              imagen="/tiago.webp"
+              descripcion="Dirección estratégica y administración general"
+              portfolioHref="https://navarrotiago.codeluxe.tech/"
+              portfolioAria="Portfolio de Tiago Navarro"
+              linkedinHref="https://www.linkedin.com/in/tiago-navarro0/"
+              linkedinAria="LinkedIn de Tiago Navarro"
+              badgeText="Cofundador & Presidente"
+              badgeGradient="from-secondary to-primary/50"
+              inicialBadgeColor="bg-secondary"
+            />
           </div>
         </div>
 
-        {/* Programadores */}
-        <div className="mb-12">
-          <h4 className="text-xl font-bold mb-6 text-primary border-b border-primary/20 pb-2">
-            Programadores
-          </h4>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {programadores.map((persona, index) => (
-              <article
-                key={index}
-                className="bg-gray-800 rounded-xl shadow-md hover:shadow-lg transition-all duration-300 p-6 border border-gray-700 hover:border-primary/30"
-              >
-                <div className="flex items-center gap-4">
-                  <div className="relative">
-                    <img
-                      className="w-16 h-16 object-cover rounded-full border-2 border-gray-600"
-                      src={persona.imagen}
-                      alt={persona.nombre}
-                      title={persona.nombre}
-                    />
-                    <div className="absolute -bottom-1 -right-1 w-5 h-5 bg-gray-400 rounded-full flex items-center justify-center">
-                      <span className="text-white text-xs font-bold">
-                        {persona.nombre
-                          .split(" ")
-                          .map((n) => n[0])
-                          .join("")
-                          .toUpperCase()}
-                      </span>
-                    </div>
-                  </div>
-                  <div className="flex-1">
-                    <h3 className="font-semibold text-white">
-                      {persona.nombre}
-                    </h3>
-                    <p className="text-gray-500 dark:text-gray-400 text-xs mb-2">
-                      Desarrollador Full Stack
-                    </p>
-                    <Link
-                      href={persona.linkedin}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      aria-label={`LinkedIn de ${persona.nombre}`}
-                      className="inline-flex items-center hover:underline text-blue-600 hover:text-blue-700 text-sm font-medium gap-1 transition-colors"
-                    >
-                      <svg
-                        className="w-4 h-4"
-                        fill="currentColor"
-                        viewBox="0 0 24 24"
-                      >
-                        <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
-                      </svg>
-                      LinkedIn
-                    </Link>
-                  </div>
-                </div>
-              </article>
-            ))}
-          </div>
-        </div>
+        <TeamSection
+          title="Programadores"
+          teamMembers={TEAM.devs}
+          role="Desarrollador Full Stack"
+        />
 
-        {/* Marketing y Ventas */}
-        <div className="mb-12">
-          <h4 className="text-xl font-bold mb-6 text-primary border-b border-primary/20 pb-2">
-            Marketing y Ventas
-          </h4>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            {marketing.map((persona, index) => (
-              <article
-                key={index}
-                className="bg-gray-800 rounded-xl shadow-md hover:shadow-lg transition-all duration-300 p-6 border border-gray-700 hover:border-primary/30"
-              >
-                <div className="flex items-center gap-4">
-                  <div className="relative">
-                    <img
-                      className="w-16 h-16 object-cover rounded-full border-2 border-gray-600"
-                      src={persona.imagen}
-                      alt={persona.nombre}
-                      title={persona.nombre}
-                    />
-                    <div className="absolute -bottom-1 -right-1 w-5 h-5 bg-gray-400 rounded-full flex items-center justify-center">
-                      <span className="text-white text-xs font-bold">
-                        {persona.nombre
-                          .split(" ")
-                          .map((n) => n[0])
-                          .join("")
-                          .toUpperCase()}
-                      </span>
-                    </div>
-                  </div>
-                  <div className="flex-1">
-                    <h3 className="font-semibold text-white">
-                      {persona.nombre}
-                    </h3>
-                    <p className="text-gray-500 dark:text-gray-400 text-xs mb-2">
-                      Marketing Digital
-                    </p>
-                    <Link
-                      href={persona.linkedin}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      aria-label={`LinkedIn de ${persona.nombre}`}
-                      className="inline-flex items-center hover:underline text-blue-600 hover:text-blue-700 text-sm font-medium gap-1 transition-colors"
-                    >
-                      <svg
-                        className="w-4 h-4"
-                        fill="currentColor"
-                        viewBox="0 0 24 24"
-                      >
-                        <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
-                      </svg>
-                      LinkedIn
-                    </Link>
-                  </div>
-                </div>
-              </article>
-            ))}
-          </div>
-        </div>
+        <TeamSection
+          title="Marketing y Ventas"
+          teamMembers={TEAM.marketing}
+          role="Marketing Digital"
+        />
 
-        {/* Diseñadores */}
-        <div className="mb-8">
-          <h4 className="text-xl font-bold mb-6 text-primary border-b border-primary/20 pb-2">
-            Diseñadores
-          </h4>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            {disenadores.map((persona, index) => (
-              <article
-                key={index}
-                className="bg-gray-800 rounded-xl shadow-md hover:shadow-lg transition-all duration-300 p-6 border border-gray-700 hover:border-primary/30"
-              >
-                <div className="flex items-center gap-4">
-                  <div className="relative">
-                    <img
-                      className="w-16 h-16 object-cover rounded-full border-2 border-gray-600"
-                      src={persona.imagen}
-                      alt={persona.nombre}
-                      title={persona.nombre}
-                    />
-                    <div className="absolute -bottom-1 -right-1 w-5 h-5 bg-gray-400 rounded-full flex items-center justify-center">
-                      <span className="text-white text-xs font-bold">
-                        {persona.nombre
-                          .split(" ")
-                          .map((n) => n[0])
-                          .join("")
-                          .toUpperCase()}
-                      </span>
-                    </div>
-                  </div>
-                  <div className="flex-1">
-                    <h3 className="font-semibold text-white">
-                      {persona.nombre}
-                    </h3>
-                    <p className="text-gray-500 dark:text-gray-400 text-xs mb-2">
-                      Diseñador
-                    </p>
-                    <Link
-                      href={persona.linkedin}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      aria-label={`LinkedIn de ${persona.nombre}`}
-                      className="inline-flex items-center hover:underline text-blue-600 hover:text-blue-700 text-sm font-medium gap-1 transition-colors"
-                    >
-                      <svg
-                        className="w-4 h-4"
-                        fill="currentColor"
-                        viewBox="0 0 24 24"
-                      >
-                        <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
-                      </svg>
-                      LinkedIn
-                    </Link>
-                  </div>
-                </div>
-              </article>
-            ))}
-          </div>
-        </div>
+        <TeamSection
+          title="Diseñadores"
+          teamMembers={TEAM.designers}
+          role="Diseñador"
+        />
       </SectionContainer>
     </div>
   );

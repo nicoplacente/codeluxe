@@ -150,9 +150,15 @@ export default function Header() {
           {/* Header del menú móvil */}
           <div className="flex items-center justify-between p-4 border-b border-primary/20">
             <div className="flex items-center gap-3">
-              <div className="w-2 h-2 bg-primary rounded-full animate-pulse" />
-              <span className="text-primary-txt font-medium">Menú</span>
-              <div className="w-2 h-2 bg-primary rounded-full animate-pulse" />
+              <Image
+                src="/logo-cd-header.webp"
+                alt="Logo Codeluxe"
+                className="size-12 object-cover min-w-12 rounded-full active:scale-90 hover:saturate-200 transition-all duration-300 cursor-pointer hover:[filter:drop-shadow(0_0_50px_#83cee555)]"
+                fetchPriority="high"
+                width={48}
+                height={48}
+                loading="eager"
+              />
             </div>
             <button
               onClick={() => setIsOpen(false)}
