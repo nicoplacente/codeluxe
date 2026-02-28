@@ -10,13 +10,20 @@ export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
   const menuRef = useRef(null);
   const touchStartX = useRef(0);
+  const touchStartY = useRef(0);
   const touchEndX = useRef(0);
+  const touchEndY = useRef(0);
 
   useEffect(() => {
     const handleClick = (e) => {
       const target = e.target;
 
-      if (target.closest("nav") || target.closest("#nav-button")) return;
+      if (
+        target.closest("nav") ||
+        target.closest("#nav-button") ||
+        target.closest("aside")
+      )
+        return;
 
       setIsOpen(false);
     };
@@ -25,28 +32,37 @@ export default function Header() {
     return () => document.removeEventListener("mousedown", handleClick);
   }, []);
 
-  // Touch handlers para swipe gesture
+  // Touch handlers para swipe gesture (mejorado para no interferir con links)
   const handleTouchStart = (e) => {
     touchStartX.current = e.touches[0].clientX;
+    touchStartY.current = e.touches[0].clientY;
+    touchEndX.current = e.touches[0].clientX;
+    touchEndY.current = e.touches[0].clientY;
   };
 
   const handleTouchMove = (e) => {
     touchEndX.current = e.touches[0].clientX;
+    touchEndY.current = e.touches[0].clientY;
   };
 
   const handleTouchEnd = () => {
     if (!touchStartX.current || !touchEndX.current) return;
 
-    const distance = touchStartX.current - touchEndX.current;
-    const isLeftSwipe = distance > 50;
-    const isRightSwipe = distance < -50;
+    const deltaX = touchStartX.current - touchEndX.current;
+    const deltaY = touchStartY.current - touchEndY.current;
 
-    if (isLeftSwipe && isOpen) {
+    // Solo considerar swipe horizontal si el movimiento es más horizontal que vertical
+    const isHorizontalSwipe = Math.abs(deltaX) > Math.abs(deltaY);
+    const isLeftSwipe = deltaX > 50;
+
+    if (isHorizontalSwipe && isLeftSwipe && isOpen) {
       setIsOpen(false);
     }
 
     touchStartX.current = 0;
+    touchStartY.current = 0;
     touchEndX.current = 0;
+    touchEndY.current = 0;
   };
 
   // Close menu on escape key
@@ -193,7 +209,9 @@ export default function Header() {
                   className={`group flex items-center gap-4 px-4 py-4 mx-2 mb-2 rounded-2xl bg-gradient-to-r from-primary/5 to-transparent border border-primary/10 hover:border-primary/30 hover:from-primary/10 hover:to-transparent transition-all duration-300 hover:scale-[1.02] hover:shadow-lg hover:shadow-primary/5 mobile-nav-item ${
                     index === 0 ? "mt-0" : ""
                   }`}
-                  onClick={() => setIsOpen(false)}
+                  onClick={() => {
+                    setTimeout(() => setIsOpen(false), 100);
+                  }}
                   style={{
                     animationDelay: isOpen ? `${index * 100}ms` : "0ms",
                   }}
@@ -234,9 +252,9 @@ export default function Header() {
 
           {/* Footer del menú móvil */}
           <div className="p-4 border-t border-primary/20 bg-gradient-to-t from-black/50 to-transparent">
-            <div className="flex items-center justify-center gap-3 text-xs text-secondary-txt swipe-hint">
+            <div className="flex items-center justify-center gap-3 text-xs text-secondary-txt">
               <div className="w-1.5 h-1.5 bg-primary rounded-full animate-pulse" />
-              <span>Desliza para cerrar</span>
+              <span>Desliza o presiona la X para cerrar</span>
               <div className="w-1.5 h-1.5 bg-primary rounded-full animate-pulse" />
             </div>
           </div>
