@@ -50,8 +50,15 @@ export const metadata = {
   category: "technology",
 };
 
+// export const viewport = {
+//   themeColor: "#080c11",
+// };
+
 export const viewport = {
   themeColor: "#080c11",
+  width: "device-width",
+  initialScale: 1,
+  viewportFit: "cover", // Clave para que el color suba al notch
 };
 
 export default function RootLayout({ children }) {

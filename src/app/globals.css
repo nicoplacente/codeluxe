@@ -17,6 +17,10 @@
   scrollbar-color: var(--primary) var(--background);
 }
 
+html {
+  color-scheme: dark;
+}
+
 @theme inline {
   --color-background: var(--background);
   --color-primary: var(--primary);
