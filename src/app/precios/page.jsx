@@ -208,6 +208,11 @@ export default function PreciosPage() {
                       Pago único
                     </span>
                   )}
+                  {service.pricingType === "custom" && (
+                    <span className="text-xs px-2 py-1 rounded-full bg-accent/10 text-accent font-medium">
+                      Precio según ahorro
+                    </span>
+                  )}
                 </div>
 
                 <Paragraph className="text-xs sm:text-sm">
@@ -262,6 +267,80 @@ export default function PreciosPage() {
             </li>
           ))}
         </ul>
+      </SectionContainer>
+
+      <SectionContainer
+        id="automatizacion-ia"
+        className="border-primary/40 bg-secondary/60"
+      >
+        <div className="flex flex-col gap-4">
+          <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3">
+            <div className="flex flex-col gap-1">
+              <span className="inline-flex items-center w-fit rounded-full bg-primary/20 text-primary px-3 py-1 text-xs font-semibold uppercase tracking-wide">
+                Innovación
+              </span>
+              <SubTitle className="text-2xl">Automatización con IA</SubTitle>
+            </div>
+            <div className="flex flex-col items-start sm:items-end gap-1">
+              <p className="text-sm text-primary-txt/80">
+                Inversión personalizada
+              </p>
+              <p className="text-3xl font-semibold text-accent">
+                Según impacto
+                {/* <span className="ml-1 text-sm text-primary-txt/80 font-normal">
+                  generando ahorro real
+                </span> */}
+              </p>
+              <p className="text-xs text-primary-txt/70">
+                Pagá según el tiempo y gastos que te ahorremos mes a mes
+              </p>
+            </div>
+          </div>
+
+          <Paragraph className="text-sm">
+            Transformá tareas repetitivas en procesos automáticos que ahorran
+            tiempo y reducen gastos operativos. Nuestra IA se encarga del
+            trabajo pesado para que te enfoques en hacer crecer tu negocio.
+          </Paragraph>
+
+          <ul className="space-y-2 text-sm">
+            <li className="flex items-start gap-2">
+              <span className="mt-0.5 text-primary">
+                <IconCheck className="size-4" />
+              </span>
+              <span>Ahorro de horas semanales de trabajo manual</span>
+            </li>
+            <li className="flex items-start gap-2">
+              <span className="mt-0.5 text-primary">
+                <IconCheck className="size-4" />
+              </span>
+              <span>Reducción mensual de gastos operativos</span>
+            </li>
+            <li className="flex items-start gap-2">
+              <span className="mt-0.5 text-primary">
+                <IconCheck className="size-4" />
+              </span>
+              <span>Procesos 100% automáticos sin intervención humana</span>
+            </li>
+            <li className="flex items-start gap-2">
+              <span className="mt-0.5 text-primary">
+                <IconCheck className="size-4" />
+              </span>
+              <span>Escalable sin esfuerzo extra ni costos adicionales</span>
+            </li>
+          </ul>
+
+          <CallToAction
+            href={buildWhatsAppUrl(
+              "Hola, me interesa la Automatización con IA de Codeluxe. Quiero calcular cuánto puedo ahorrar en tiempo y gastos.",
+            )}
+            ariaLabel="Solicitar automatización con IA por WhatsApp"
+            target="_blank"
+            rel="noopener noreferrer nofollow"
+          >
+            Calcular mi ahorro
+          </CallToAction>
+        </div>
       </SectionContainer>
 
       <SectionContainer

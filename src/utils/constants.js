@@ -434,6 +434,11 @@ export const TEAM = {
       imagen: "/equipo/basilio.webp",
       linkedin: "https://www.linkedin.com/in/basilioalvarez/",
     },
+    {
+      nombre: "Bruno Vallejo",
+      imagen: "/equipo/bruno-vallejo.webp",
+      linkedin: "https://www.linkedin.com/in/bruno-agustin-vallejo/",
+    },
   ],
 
   marketing: [
