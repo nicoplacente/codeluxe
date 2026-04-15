@@ -197,7 +197,7 @@ export default function Info() {
               portfolioAria="Portfolio de Nicolás Placente"
               linkedinHref="https://linkedin.com/in/nicoplacente"
               linkedinAria="LinkedIn de Nicolás Placente"
-              badgeText="SEO & Fundador"
+              badgeText="CEO & Fundador"
               badgeGradient="from-primary/50 to-secondary"
               inicialBadgeColor="bg-primary"
             />
