@@ -447,12 +447,6 @@ export const TEAM = {
       imagen: "/equipo/franco.webp",
       linkedin: "https://www.linkedin.com/in/franco-colavita-354490208/",
     },
-    {
-      nombre: "Sofía Fernández Catalini",
-      imagen: "/equipo/sofi.webp",
-      linkedin:
-        "https://www.linkedin.com/in/sof%C3%ADa-fern%C3%A1ndez-catalini-22a1a9281/",
-    },
   ],
 
   designers: [
